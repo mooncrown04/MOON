@@ -1,0 +1,22 @@
+{
+  "streams": [
+    {
+      "name": "KANAL D",
+      "title": "KANAL D | DİĞER",
+      "url": "https://live.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "ch_kanal-d"
+      }
+    },
+    {
+      "name": "KANAL D",
+      "title": "KANAL D | DİĞER",
+      "url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "ch_kanal-d"
+      }
+    }
+  ]
+}

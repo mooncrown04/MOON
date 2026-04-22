@@ -1,0 +1,13 @@
+{
+  "streams": [
+    {
+      "name": "NOW",
+      "title": "NOW | DİĞER",
+      "url": "https://tinyurl.com/SyndraxicFOX",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "ch_now"
+      }
+    }
+  ]
+}
