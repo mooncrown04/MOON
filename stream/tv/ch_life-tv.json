@@ -2,7 +2,7 @@
   "streams": [
     {
       "name": "LIFE TV",
-      "title": "LIFE TV | GENEL",
+      "title": "LIFE TV | DİĞER",
       "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
       "behaviorHints": {
         "notClickable": false,

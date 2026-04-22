@@ -2,7 +2,7 @@
   "streams": [
     {
       "name": "KANAL 7",
-      "title": "KANAL 7 | GENEL",
+      "title": "KANAL 7 | DİĞER",
       "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7_1080p.m3u8",
       "behaviorHints": {
         "notClickable": false,

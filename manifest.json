@@ -16,9 +16,9 @@
   ],
   "catalogs": [
     {
-      "id": "cat_genel",
+      "id": "cat_diger",
       "type": "tv",
-      "name": "📺 GENEL"
+      "name": "📺 DİĞER"
     }
   ]
 }
