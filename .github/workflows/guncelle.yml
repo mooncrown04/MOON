@@ -1,12 +1,12 @@
-name: IPTV Otomatik Guncelleme
+name: IPTV Gelişmiş Katalog Güncelleme
 
 on:
   push:
     paths:
-      - 'liste.m3u'  # liste.m3u değişince çalışır
+      - 'liste.m3u'
   schedule:
-    - cron: '0 3 * * *'  # Her gün Türkiye saatiyle 06:00'da (UTC 03:00) çalışır
-  workflow_dispatch:      # İstediğinde manuel başlatabilmen için
+    - cron: '0 3 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -32,8 +32,9 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
-        # Sadece stream/tv klasöründeki JSON dosyalarını ekle
+        # Tüm yeni klasörleri ekle
         git add stream/tv/*.json
+        git add meta/tv/*.json
+        git add catalog/tv/*.json
         
-        # Değişiklik varsa commit at ve pushla
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Otomatik Güncelleme: $(date +'%Y-%m-%d %H:%M')" && git push)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Katalog Güncellendi: $(date +'%Y-%m-%d %H:%M')" && git push)
