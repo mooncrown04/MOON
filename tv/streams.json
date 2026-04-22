@@ -1,0 +1,211 @@
+{
+  "streams": [
+    {
+      "name": "360",
+      "title": "360 | ULUSAL",
+      "url": "https://tv.ensonhaber.com/tv360/tv360.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "360"
+      }
+    },
+    {
+      "name": "A2",
+      "title": "A2 | ULUSAL",
+      "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv_1080p.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "a2"
+      }
+    },
+    {
+      "name": "ATV",
+      "title": "ATV | ULUSAL",
+      "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_720p.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "atv"
+      }
+    },
+    {
+      "name": "EURO D",
+      "title": "EURO D | ULUSAL",
+      "url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/track_4_1000/playlist.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "euro-d"
+      }
+    },
+    {
+      "name": "HABER GLOBAL",
+      "title": "HABER GLOBAL | ULUSAL",
+      "url": "https://tv.ensonhaber.com/haberglobal/haberglobal_720p.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "haber-global"
+      }
+    },
+    {
+      "name": "KANAL 7",
+      "title": "KANAL 7 | ULUSAL",
+      "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7_1080p.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "kanal-7"
+      }
+    },
+    {
+      "name": "KANAL 7 AVRUPA",
+      "title": "KANAL 7 AVRUPA | ULUSAL",
+      "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "kanal-7-avrupa"
+      }
+    },
+    {
+      "name": "KANAL D",
+      "title": "KANAL D | ULUSAL",
+      "url": "https://live.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "kanal-d"
+      }
+    },
+    {
+      "name": "KANAL D",
+      "title": "KANAL D | ALTERNATİF",
+      "url": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "kanal-d"
+      }
+    },
+    {
+      "name": "LIFE TV",
+      "title": "LIFE TV | ULUSAL",
+      "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "life-tv"
+      }
+    },
+    {
+      "name": "NOW",
+      "title": "NOW | ULUSAL",
+      "url": "https://tinyurl.com/SyndraxicFOX",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "now"
+      }
+    },
+    {
+      "name": "SHOW TV",
+      "title": "SHOW TV | ULUSAL",
+      "url": "https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "show-tv"
+      }
+    },
+    {
+      "name": "TEVE 2",
+      "title": "TEVE 2 | ULUSAL",
+      "url": "https://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "teve-2"
+      }
+    },
+    {
+      "name": "TEVE 2",
+      "title": "TEVE 2 | ALTERNATİF",
+      "url": "https://live.duhnet.tv/S2/HLS_LIVE/teve2np/track_4_1000/playlist.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "teve-2"
+      }
+    },
+    {
+      "name": "TIVI 6",
+      "title": "TIVI 6 | ULUSAL",
+      "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "tivi-6"
+      }
+    },
+    {
+      "name": "TRT 1",
+      "title": "TRT 1 | ULUSAL",
+      "url": "https://tv-trt1-esdai.medya.trt.com.tr/master.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "trt-1"
+      }
+    },
+    {
+      "name": "TRT KURDİ",
+      "title": "TRT KURDİ | ULUSAL",
+      "url": "https://tv-trtkurdi.medya.trt.com.tr/master_720.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "trt-kurdi̇"
+      }
+    },
+    {
+      "name": "TRT TURK",
+      "title": "TRT TURK | ULUSAL",
+      "url": "https://tv-trtturk.medya.trt.com.tr/master_720.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "trt-turk"
+      }
+    },
+    {
+      "name": "HALK TV",
+      "title": "HALK TV | ULUSAL",
+      "url": "https://halktv.daioncdn.net/halktv/halktv_1080p.m3u8?app=c86957d3-74a7-44da-9ad2-dc358c769609",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "halk-tv"
+      }
+    },
+    {
+      "name": "NTV",
+      "title": "NTV | ULUSAL",
+      "url": "https://dogus.daioncdn.net/ntv/ntv_720p.m3u8?ce=3",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "ntv"
+      }
+    },
+    {
+      "name": "SÖZCÜ TV",
+      "title": "SÖZCÜ TV | ULUSAL",
+      "url": "http://51.20.137.71/yt/yt.m3u8?kanal=@sozcutelevizyonu",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "sözcü-tv"
+      }
+    },
+    {
+      "name": "TGRT HABER",
+      "title": "TGRT HABER | ULUSAL",
+      "url": "https://tgrthaber-live.daioncdn.net/tgrthaber/tgrthaber_720p.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "tgrt-haber"
+      }
+    },
+    {
+      "name": "TGRT HABER",
+      "title": "TGRT HABER | ALTERNATİF",
+      "url": "https://canli.tgrthaber.com/tgrt.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "tgrt-haber"
+      }
+    }
+  ]
+}
