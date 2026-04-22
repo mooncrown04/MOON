@@ -1,13 +1,15 @@
-name: IPTV Listesini Guncelle
+name: IPTV Otomatik Guncelleme
 
 on:
   push:
     paths:
-      - 'liste.m3u'
-  workflow_dispatch:
+      - 'liste.m3u'  # liste.m3u değişince çalışır
+  schedule:
+    - cron: '0 3 * * *'  # Her gün Türkiye saatiyle 06:00'da (UTC 03:00) çalışır
+  workflow_dispatch:      # İstediğinde manuel başlatabilmen için
 
 permissions:
-  contents: write  # 403 hatasını çözen kritik yetki
+  contents: write
 
 jobs:
   build:
@@ -29,6 +31,9 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add tv/streams.json
-        # Değişiklik varsa commit at, yoksa hata vermeden geç
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Otomatik: streams.json guncellendi" && git push)
+        
+        # Sadece stream/tv klasöründeki JSON dosyalarını ekle
+        git add stream/tv/*.json
+        
+        # Değişiklik varsa commit at ve pushla
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Otomatik Güncelleme: $(date +'%Y-%m-%d %H:%M')" && git push)
