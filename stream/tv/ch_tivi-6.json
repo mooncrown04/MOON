@@ -2,7 +2,7 @@
   "streams": [
     {
       "name": "TIVI 6",
-      "title": "TIVI 6 | DİĞER",
+      "title": "TIVI 6 | GENEL",
       "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
       "behaviorHints": {
         "notClickable": false,

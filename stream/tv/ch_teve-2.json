@@ -2,7 +2,7 @@
   "streams": [
     {
       "name": "TEVE 2",
-      "title": "TEVE 2 | DİĞER",
+      "title": "TEVE 2 | GENEL",
       "url": "https://live.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8",
       "behaviorHints": {
         "notClickable": false,
@@ -11,7 +11,7 @@
     },
     {
       "name": "TEVE 2",
-      "title": "TEVE 2 | DİĞER",
+      "title": "TEVE 2 | GENEL",
       "url": "https://live.duhnet.tv/S2/HLS_LIVE/teve2np/track_4_1000/playlist.m3u8",
       "behaviorHints": {
         "notClickable": false,

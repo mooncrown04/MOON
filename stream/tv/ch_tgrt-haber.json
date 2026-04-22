@@ -2,7 +2,7 @@
   "streams": [
     {
       "name": "TGRT HABER",
-      "title": "TGRT HABER | DİĞER",
+      "title": "TGRT HABER | GENEL",
       "url": "https://tgrthaber-live.daioncdn.net/tgrthaber/tgrthaber_720p.m3u8",
       "behaviorHints": {
         "notClickable": false,
@@ -11,7 +11,7 @@
     },
     {
       "name": "TGRT HABER",
-      "title": "TGRT HABER | DİĞER",
+      "title": "TGRT HABER | GENEL",
       "url": "https://canli.tgrthaber.com/tgrt.m3u8",
       "behaviorHints": {
         "notClickable": false,
