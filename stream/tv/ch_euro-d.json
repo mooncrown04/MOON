@@ -1,13 +1,9 @@
 {
   "streams": [
     {
-      "name": "EURO D",
+      "name": "EURO D (Kaynak 1)",
       "title": "EURO D | DİĞER",
-      "url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/track_4_1000/playlist.m3u8",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_euro-d"
-      }
+      "url": "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/track_4_1000/playlist.m3u8"
     }
   ]
 }

@@ -1,13 +1,9 @@
 {
   "streams": [
     {
-      "name": "NOW",
+      "name": "NOW (Kaynak 1)",
       "title": "NOW | DİĞER",
-      "url": "https://tinyurl.com/SyndraxicFOX",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_now"
-      }
+      "url": "https://tinyurl.com/SyndraxicFOX"
     }
   ]
 }

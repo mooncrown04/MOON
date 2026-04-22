@@ -1,13 +1,9 @@
 {
   "streams": [
     {
-      "name": "ATV",
+      "name": "ATV (Kaynak 1)",
       "title": "ATV | DİĞER",
-      "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_720p.m3u8",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_atv"
-      }
+      "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_720p.m3u8"
     }
   ]
 }

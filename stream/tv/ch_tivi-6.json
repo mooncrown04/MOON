@@ -1,13 +1,9 @@
 {
   "streams": [
     {
-      "name": "TIVI 6",
+      "name": "TIVI 6 (Kaynak 1)",
       "title": "TIVI 6 | DİĞER",
-      "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_tivi-6"
-      }
+      "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8"
     }
   ]
 }

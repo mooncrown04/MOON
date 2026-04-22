@@ -1,13 +1,9 @@
 {
   "streams": [
     {
-      "name": "LIFE TV",
+      "name": "LIFE TV (Kaynak 1)",
       "title": "LIFE TV | DİĞER",
-      "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_life-tv"
-      }
+      "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8"
     }
   ]
 }
