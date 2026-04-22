@@ -2,13 +2,11 @@ import re
 import json
 import os
 
-def process_m3u_to_single_list(m3u_file, output_path):
-    # Klasör kontrolü
-    output_dir = os.path.dirname(output_path)
-    if output_dir and not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+def process_m3u_to_individual_jsons(m3u_file, output_folder):
+    # Klasör yapısını oluştur: stream/tv/
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
 
-    # M3U dosyasını oku
     if not os.path.exists(m3u_file):
         print(f"Hata: {m3u_file} bulunamadı.")
         return
@@ -16,49 +14,47 @@ def process_m3u_to_single_list(m3u_file, output_path):
     with open(m3u_file, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Mevcut JSON'u yükle veya boş başlat
-    if os.path.exists(output_path):
-        with open(output_path, 'r', encoding='utf-8') as f:
-            try:
-                data = json.load(f)
-            except:
-                data = {"streams": []}
-    else:
-        data = {"streams": []}
-
-    # Regex: Kanal adı ve URL'yi yakalar
+    # Regex: Kanal adı (#EXTINF sonrası virgül) ve altındaki URL'yi yakalar
     pattern = re.compile(r'#EXTINF:.*?,(.*?)\n(http.*?)(?:\n|$)', re.MULTILINE)
     matches = pattern.findall(content)
 
+    # Kanalları grupla
+    channels = {}
+
     for name, url in matches:
         clean_name = name.strip()
+        # Dosya ismi için geçersiz karakterleri ( / \ : * ? " < > | ) temizle
+        safe_filename = re.sub(r'[\\/*?:"<>|]', "-", clean_name)
         clean_url = url.strip()
 
-        # Link zaten listede var mı kontrolü
-        is_url_exists = any(clean_url == s.get("url") for s in data["streams"] if s["name"] == clean_name)
+        if safe_filename not in channels:
+            channels[safe_filename] = {"display_name": clean_name, "urls": []}
         
-        if not is_url_exists:
-            # Kanalın ilk linki mi yoksa alternatif mi olduğunu anla
-            is_first = not any(s["name"] == clean_name for s in data["streams"])
-            suffix = "ULUSAL" if is_first else "ALTERNATİF"
+        if clean_url not in channels[safe_filename]["urls"]:
+            channels[safe_filename]["urls"].append(clean_url)
+
+    # Her kanal için ayrı JSON
+    for safe_name, info in channels.items():
+        output_data = {"streams": []}
+        display_name = info["display_name"]
+        
+        for index, url in enumerate(info["urls"]):
+            # Birden fazla kaynak varsa ismi koru ama yanına numara ekle (isteğe bağlı)
+            label = display_name if len(info["urls"]) == 1 else f"{display_name} (Kaynak {index + 1})"
             
-            new_entry = {
-                "name": clean_name,
-                "title": f"{clean_name} | {suffix}",
-                "url": clean_url,
-                "behaviorHints": {
-                    "notClickable": False,
-                    "bingeGroup": clean_name.lower().replace(" ", "-")
-                }
+            stream_obj = {
+                "name": label, # Burada "SERVER 1" yerine kanalın kendi ismi var
+                "title": f"{display_name} - Yayın Hattı {index + 1}",
+                "url": url
             }
-            data["streams"].append(new_entry)
+            output_data["streams"].append(stream_obj)
 
-    # JSON Olarak Kaydet
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    
-    print(f"Başarılı: {len(matches)} link işlendi.")
+        file_path = os.path.join(output_folder, f"{safe_name}.json")
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(output_data, f, ensure_ascii=False, indent=2)
+        
+        print(f"Başarılı: {file_path}")
 
-# GitHub Action için doğru yol ve dosya isimleri
 if __name__ == "__main__":
-    process_m3u_to_single_list("liste.m3u", "./tv/streams.json")
+    process_m3u_to_individual_jsons("liste.m3u", "./stream/tv")
