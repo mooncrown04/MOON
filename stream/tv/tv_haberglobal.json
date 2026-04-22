@@ -1,0 +1,13 @@
+{
+  "streams": [
+    {
+      "name": "HABER GLOBAL",
+      "title": "HABER GLOBAL | GENEL",
+      "url": "https://tv.ensonhaber.com/haberglobal/haberglobal_720p.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "tv_haberglobal"
+      }
+    }
+  ]
+}

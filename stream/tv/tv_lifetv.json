@@ -1,0 +1,13 @@
+{
+  "streams": [
+    {
+      "name": "LIFE TV",
+      "title": "LIFE TV | GENEL",
+      "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "tv_lifetv"
+      }
+    }
+  ]
+}

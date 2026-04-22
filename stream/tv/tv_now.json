@@ -1,0 +1,13 @@
+{
+  "streams": [
+    {
+      "name": "NOW",
+      "title": "NOW | GENEL",
+      "url": "https://tinyurl.com/SyndraxicFOX",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "tv_now"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "streams": [
+    {
+      "name": "360",
+      "title": "360 | GENEL",
+      "url": "https://tv.ensonhaber.com/tv360/tv360.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "tv_360"
+      }
+    }
+  ]
+}
