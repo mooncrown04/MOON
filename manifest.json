@@ -1,0 +1,24 @@
+{
+  "id": "MoOnCrOwN-catalog",
+  "version": "0.0.4",
+  "name": "MoOnCrOwN-0o0-tv",
+  "description": "MoOnCrOwN Canlı TV-Film-Dizi kanalları!",
+  "resources": [
+    "catalog",
+    "meta",
+    "stream"
+  ],
+  "types": [
+    "tv"
+  ],
+  "idPrefixes": [
+    "ch_"
+  ],
+  "catalogs": [
+    {
+      "id": "cat_genel",
+      "type": "tv",
+      "name": "📺 GENEL"
+    }
+  ]
+}
