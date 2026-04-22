@@ -3,15 +3,17 @@ import json
 import os
 
 def slugify(text):
-    """Kanal ismini bingeGroup için uygun formata (ör: a2-tv) getirir."""
+    """ID ve Dosya adları için metni temizler (Örn: 'TRT 1' -> 'trt1')"""
     text = text.lower()
-    text = re.sub(r'\s+', '-', text)
-    return re.sub(r'[^\w\-]', '', text)
+    text = text.replace("ı", "i").replace("ğ", "g").replace("ü", "u").replace("ş", "s").replace("ö", "o").replace("ç", "c")
+    text = re.sub(r'\s+', '', text)
+    return re.sub(r'[^\w]', '', text)
 
-def process_m3u_to_custom_jsons(m3u_file, output_folder):
-    # Klasör yapısını oluştur: stream/tv/
-    if not os.path.exists(output_folder):
-        os.makedirs(output_folder, exist_ok=True)
+def process_m3u_to_stremio_format(m3u_file):
+    # Klasör yolları
+    folders = ["stream/tv", "meta/tv", "catalog/tv"]
+    for folder in folders:
+        os.makedirs(folder, exist_ok=True)
 
     if not os.path.exists(m3u_file):
         print(f"Hata: {m3u_file} bulunamadı.")
@@ -25,43 +27,78 @@ def process_m3u_to_custom_jsons(m3u_file, output_folder):
     matches = pattern.findall(content)
 
     channels = {}
+    categories = {}
 
     for group, logo, name, url in matches:
         clean_name = name.strip()
-        # Dosya adı için geçersiz karakterleri temizle
-        safe_filename = re.sub(r'[\\/*?:"<>|]', "-", clean_name)
+        channel_id = f"tv_{slugify(clean_name)}"
         clean_url = url.strip()
-        clean_group = group.strip().upper() if group else "ULUSAL"
+        clean_group = group.strip() if group else "GENEL"
+        clean_logo = logo.strip() if logo else "https://via.placeholder.com/300x450?text=" + clean_name
 
-        if safe_filename not in channels:
-            channels[safe_filename] = {
-                "display_name": clean_name,
+        # --- KANAL VERİSİNİ GRUPLA ---
+        if channel_id not in channels:
+            channels[channel_id] = {
+                "name": clean_name,
                 "group": clean_group,
+                "logo": clean_logo,
                 "streams": []
             }
         
-        # Mükerrer URL kontrolü
-        if not any(s['url'] == clean_url for s in channels[safe_filename]["streams"]):
-            stream_obj = {
+        # Mükerrer URL engelleme ve yayın ekleme
+        if not any(s['url'] == clean_url for s in channels[channel_id]["streams"]):
+            channels[channel_id]["streams"].append({
                 "name": clean_name,
-                "title": f"{clean_name} |{clean_group}",
+                "title": f"{clean_name} | {clean_group}",
                 "url": clean_url,
                 "behaviorHints": {
                     "notClickable": False,
-                    "bingeGroup": slugify(clean_name)
+                    "bingeGroup": channel_id
                 }
-            }
-            channels[safe_filename]["streams"].append(stream_obj)
+            })
 
-    # JSON dosyalarını kaydet
-    for safe_name, info in channels.items():
-        file_path = os.path.join(output_folder, f"{safe_name}.json")
-        output_data = {"streams": info["streams"]}
-
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(output_data, f, ensure_ascii=False, indent=2)
+        # --- KATALOG VERİSİNİ GRUPLA (Kategorilere Göre) ---
+        if clean_group not in categories:
+            categories[clean_group] = []
         
-    print(f"İşlem bitti. {len(channels)} adet kanal dosyası 'stream/tv/' klasörüne kaydedildi.")
+        # Katalog listesine ekle (zaten eklenmemişse)
+        if not any(m['id'] == channel_id for m in categories[clean_group]):
+            categories[clean_group].append({
+                "id": channel_id,
+                "type": "tv",
+                "name": clean_name,
+                "poster": clean_logo,
+                "description": f"{clean_name} Canlı Yayın"
+            })
+
+    # --- 1. STREAM DOSYALARINI YAZ (stream/tv/id.json) ---
+    for cid, info in channels.items():
+        with open(f"stream/tv/{cid}.json", 'w', encoding='utf-8') as f:
+            json.dump({"streams": info["streams"]}, f, ensure_ascii=False, indent=2)
+
+    # --- 2. META DOSYALARINI YAZ (meta/tv/id.json) ---
+    for cid, info in channels.items():
+        meta_data = {
+            "meta": {
+                "id": cid,
+                "type": "tv",
+                "name": info["name"],
+                "poster": info["logo"],
+                "background": info["logo"],
+                "description": f"{info['name']} Canlı Yayın Akışı"
+            }
+        }
+        with open(f"meta/tv/{cid}.json", 'w', encoding='utf-8') as f:
+            json.dump(meta_data, f, ensure_ascii=False, indent=2)
+
+    # --- 3. CATALOG DOSYALARINI YAZ (catalog/tv/Kategori_Ismi.json) ---
+    for cat_name, metas in categories.items():
+        safe_cat_name = slugify(cat_name)
+        with open(f"catalog/tv/{safe_cat_name}.json", 'w', encoding='utf-8') as f:
+            json.dump({"metas": metas}, f, ensure_ascii=False, indent=2)
+
+    print(f"İşlem Başarılı!")
+    print(f"Oluşturulan: {len(channels)} Kanal, {len(categories)} Kategori.")
 
 if __name__ == "__main__":
-    process_m3u_to_custom_jsons("liste.m3u", "./stream/tv")
+    process_m3u_to_stremio_format("liste.m3u")
