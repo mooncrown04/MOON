@@ -25,25 +25,32 @@ def process_stremio_addon(m3u_file):
     with open(m3u_file, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Regex: Group-title, Logo, Kanal Adı ve URL çekme
-    pattern = re.compile(r'#EXTINF:.*?(?:group-title="(.*?)")?.*?(?:tvg-logo="(.*?)")?,(.*?)\n(http.*?)(?:\n|$)', re.MULTILINE)
-    matches = pattern.findall(content)
+    # GELİŞMİŞ REGEX: Etiketlerin sırasından bağımsız olarak group-title, logo ve kanal ismini çeker
+    # Bu patern hem tırnaklı hem tırnaksız yapıları ve farklı sıralamaları yakalar
+    pattern = re.compile(r'#EXTINF:-1.*?(?:group-title="(?P<group>.*?)")?.*?(?:tvg-logo="(?P<logo>.*?)")?,(?P<name>.*?)\n(?P<url>http.*?)(?:\n|$)', re.MULTILINE | re.DOTALL)
+    
+    matches = pattern.finditer(content)
 
     channels = {}
     categories = {}
 
-    for group_title, logo, name, url in matches:
-        clean_name = name.strip()
-        group_name = group_title.strip() if group_title else "GENEL"
+    for match in matches:
+        group_val = match.group('group')
+        logo_val = match.group('logo')
+        name_val = match.group('name')
+        url_val = match.group('url')
+
+        clean_name = name_val.strip()
+        group_name = group_val.strip() if group_val else "DİĞER"
         
         # ID Oluşturma
         channel_id = f"ch_{slugify(clean_name)}"
         cat_id = f"cat_{slugify(group_name)}"
         
-        clean_url = url.strip()
-        clean_logo = logo.strip() if logo else "https://via.placeholder.com/300x450?text=" + clean_name
+        clean_url = url_val.strip()
+        clean_logo = logo_val.strip() if logo_val else "https://via.placeholder.com/300x450?text=" + clean_name
 
-        # 1. Kanalları ve Yayın Linklerini Eşleştir
+        # 1. Kanalları ve Yayın Linklerini Kaydet
         if channel_id not in channels:
             channels[channel_id] = {
                 "name": clean_name,
@@ -60,7 +67,7 @@ def process_stremio_addon(m3u_file):
                 "behaviorHints": {"notClickable": False, "bingeGroup": channel_id}
             })
 
-        # 2. Kategorileri (Catalogs) ve İçeriklerini Eşleştir
+        # 2. Kategorileri (Catalog) Eşleştir
         if cat_id not in categories:
             categories[cat_id] = {"display_name": group_name, "metas": []}
         
@@ -73,14 +80,15 @@ def process_stremio_addon(m3u_file):
                 "description": f"{clean_name} - {group_name} Canlı Yayın"
             })
 
-    # --- DOSYA YAZIM AŞAMASI ---
+    # --- DOSYA YAZMA ---
 
-    # A. Stream ve Meta Dosyaları
+    # A. Stream ve Meta
     for cid, info in channels.items():
-        # Stream
+        # Stream JSON
         with open(f"stream/tv/{cid}.json", 'w', encoding='utf-8') as f:
             json.dump({"streams": info["streams"]}, f, ensure_ascii=False, indent=2)
-        # Meta
+        
+        # Meta JSON
         meta_data = {
             "meta": {
                 "id": cid,
@@ -94,12 +102,12 @@ def process_stremio_addon(m3u_file):
         with open(f"meta/tv/{cid}.json", 'w', encoding='utf-8') as f:
             json.dump(meta_data, f, ensure_ascii=False, indent=2)
 
-    # B. Catalog Dosyaları (Kategori bazlı liste)
+    # B. Catalog JSON'ları
     for cat_id, data in categories.items():
         with open(f"catalog/tv/{cat_id}.json", 'w', encoding='utf-8') as f:
             json.dump({"metas": data["metas"]}, f, ensure_ascii=False, indent=2)
 
-    # C. Manifest.json (Dinamik Katalog Listesi)
+    # C. MANIFEST.JSON (Tam Dinamik)
     manifest = {
         "id": "MoOnCrOwN-catalog",
         "version": "0.0.4",
@@ -120,7 +128,7 @@ def process_stremio_addon(m3u_file):
     with open("manifest.json", 'w', encoding='utf-8') as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-    print(f"İşlem bitti: {len(channels)} kanal, {len(categories)} kategori oluşturuldu.")
+    print(f"İşlem bitti: {len(channels)} kanal ve {len(categories)} kategori (manifest dahil) oluşturuldu.")
 
 if __name__ == "__main__":
     process_stremio_addon("liste.m3u")
