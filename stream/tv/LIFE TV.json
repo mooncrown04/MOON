@@ -1,0 +1,13 @@
+{
+  "streams": [
+    {
+      "name": "LIFE TV",
+      "title": "LIFE TV |ULUSAL",
+      "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "life-tv"
+      }
+    }
+  ]
+}
