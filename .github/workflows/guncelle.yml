@@ -1,16 +1,10 @@
-name: IPTV Otomatik Sistem Güncelleme
+name: MoOnCrOwN Addon Builder
 
 on:
-  # 1. Herhangi bir dosya değişip push yapıldığında tetiklenir
   push:
-    branches:
-      - main  # veya deponun ana dalı neyse (master vb.)
-  
-  # 2. Günde bir kez otomatik çalışır (UTC 03:00 -> TSİ 06:00)
+    branches: [ main ]
   schedule:
     - cron: '0 3 * * *'
-
-  # 3. Manuel olarak "Actions" sekmesinden başlatabilmen için
   workflow_dispatch:
 
 permissions:
@@ -19,28 +13,26 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Depoyu Kopyala
-      uses: actions/checkout@v3
+      - name: Depoyu Kopyala
+        uses: actions/checkout@v3
 
-    - name: Python Kurulumu
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-
-    - name: Scripti Calistir
-      run: python stream.py
-
-    - name: Degisiklikleri Kaydet ve Yukle
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        
-        # Tüm klasörlerdeki değişiklikleri tarar
-        git add stream/tv/*.json
-        git add meta/tv/*.json
-        git add catalog/tv/*.json
-        
-        # Sadece değişiklik varsa işlem yapar
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Sistem Otomatik Güncellendi: $(date +'%Y-%m-%d %H:%M')" && git push)
+      - name: Python Kurulumu
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Sistemi Guncelle
+        run: python stream.py
+      
+      - name: Degisiklikleri Yukle
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Hepsini ekle (manifest.json ve tüm alt klasörler)
+          git add -A
+          
+          # Değişiklik kontrolü ve commit
+          git commit -m "Auto Update: Manifest and Assets $(date +'%Y-%m-%d %H:%M')" || echo "Degisiklik yok"
+          git push
