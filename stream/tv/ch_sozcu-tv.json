@@ -1,13 +1,8 @@
 {
   "streams": [
     {
-      "name": "SÖZCÜ TV",
-      "title": "SÖZCÜ TV | DİĞER",
-      "url": "http://51.20.137.71/yt/yt.m3u8?kanal=@sozcutelevizyonu",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_sozcu-tv"
-      }
+      "title": "SÖZCÜ TV - Yayın Kaynağı",
+      "url": "http://51.20.137.71/yt/yt.m3u8?kanal=@sozcutelevizyonu"
     }
   ]
 }

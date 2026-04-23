@@ -1,13 +1,8 @@
 {
   "streams": [
     {
-      "name": "NOW",
-      "title": "NOW | DİĞER",
-      "url": "https://tinyurl.com/SyndraxicFOX",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_now"
-      }
+      "title": "NOW - Yayın Kaynağı",
+      "url": "https://tinyurl.com/SyndraxicFOX"
     }
   ]
 }

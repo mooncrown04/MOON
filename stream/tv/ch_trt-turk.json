@@ -1,13 +1,8 @@
 {
   "streams": [
     {
-      "name": "TRT TURK",
-      "title": "TRT TURK | DİĞER",
-      "url": "https://tv-trtturk.medya.trt.com.tr/master_720.m3u8",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_trt-turk"
-      }
+      "title": "TRT TURK - Yayın Kaynağı",
+      "url": "https://tv-trtturk.medya.trt.com.tr/master_720.m3u8"
     }
   ]
 }

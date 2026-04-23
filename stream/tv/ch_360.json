@@ -1,13 +1,8 @@
 {
   "streams": [
     {
-      "name": "360",
-      "title": "360 | DİĞER",
-      "url": "https://tv.ensonhaber.com/tv360/tv360.m3u8",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_360"
-      }
+      "title": "360 - Yayın Kaynağı",
+      "url": "https://tv.ensonhaber.com/tv360/tv360.m3u8"
     }
   ]
 }

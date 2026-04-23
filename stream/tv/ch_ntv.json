@@ -1,13 +1,8 @@
 {
   "streams": [
     {
-      "name": "NTV",
-      "title": "NTV | DİĞER",
-      "url": "https://dogus.daioncdn.net/ntv/ntv_720p.m3u8?ce=3",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_ntv"
-      }
+      "title": "NTV - Yayın Kaynağı",
+      "url": "https://dogus.daioncdn.net/ntv/ntv_720p.m3u8?ce=3"
     }
   ]
 }
