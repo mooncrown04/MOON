@@ -1,6 +1,7 @@
 import re
 import json
 import os
+import shutil
 
 def slugify(text):
     """ID ve Dosya adları için metni temizler."""
@@ -12,8 +13,13 @@ def slugify(text):
     return text.strip("-")
 
 def process_stremio_addon(m3u_file):
-    # Klasörleri temizle/hazırla
+    # --- KRİTİK: FAZLA DOSYALARI SİLME ---
+    # Her çalıştığında klasörleri silip baştan oluşturur, böylece m3u'da olmayanlar silinmiş olur.
     folders = ["stream/tv", "meta/tv", "catalog/tv"]
+    for folder_path in ["stream", "meta", "catalog"]:
+        if os.path.exists(folder_path):
+            shutil.rmtree(folder_path)
+    
     for folder in folders:
         os.makedirs(folder, exist_ok=True)
 
@@ -32,7 +38,6 @@ def process_stremio_addon(m3u_file):
         line = line.strip()
         
         if line.startswith("#EXTINF:"):
-            # M3U içindeki group-title, logo ve kanal ismini alıyoruz
             group_match = re.search(r'group-title="([^"]+)"', line)
             logo_match = re.search(r'tvg-logo="([^"]+)"', line)
             name_parts = line.split(",")
@@ -47,7 +52,7 @@ def process_stremio_addon(m3u_file):
         elif line.startswith("http") and current_info:
             url = line
             chan_id = f"ch_{slugify(current_info['name'])}"
-            cat_id = f"cat_{slugify(current_info['group'])}" # Dosya ismi ve ID burası
+            cat_id = f"cat_{slugify(current_info['group'])}"
             
             # 1. Kanalları Kaydet (Stream & Meta)
             if chan_id not in channels:
@@ -58,15 +63,21 @@ def process_stremio_addon(m3u_file):
                     "streams": []
                 }
             
+            # --- DÜZELTME: STREAM TITLE (Kanal Adı | Kategori Adı) ---
             channels[chan_id]["streams"].append({
-                "title": f"{current_info['name']} - Yayın Kaynağı",
-                "url": url
+                "name": current_info['name'],
+                "title": f"{current_info['name']} | {current_info['group']}",
+                "url": url,
+                "behaviorHints": {
+                    "notClickable": False,
+                    "bingeGroup": chan_id
+                }
             })
 
-            # 2. Katalogları Kaydet (Manifest ve Klasör uyumu için)
+            # 2. Katalogları Kaydet
             if cat_id not in categories:
                 categories[cat_id] = {
-                    "display_name": current_info['group'], # Görünecek isim: "Haberler"
+                    "display_name": current_info['group'],
                     "metas": []
                 }
             
@@ -82,21 +93,30 @@ def process_stremio_addon(m3u_file):
 
     # --- DOSYALARI OLUŞTUR ---
 
-    # stream/tv/*.json ve meta/tv/*.json
+    # stream ve meta dosyaları
     for cid, info in channels.items():
         with open(f"stream/tv/{cid}.json", 'w', encoding='utf-8') as f:
             json.dump({"streams": info["streams"]}, f, ensure_ascii=False, indent=2)
         
-        meta = {"meta": {"id": cid, "type": "tv", "name": info["name"], "poster": info["logo"], "background": info["logo"], "description": info["name"]}}
+        meta = {
+            "meta": {
+                "id": cid, 
+                "type": "tv", 
+                "name": info["name"], 
+                "poster": info["logo"], 
+                "background": info["logo"], 
+                "description": info["name"]
+            }
+        }
         with open(f"meta/tv/{cid}.json", 'w', encoding='utf-8') as f:
             json.dump(meta, f, ensure_ascii=False, indent=2)
 
-    # catalog/tv/*.json (Dosya adı cat_id ile tam uyumlu)
+    # catalog dosyaları
     for cat_id, data in categories.items():
         with open(f"catalog/tv/{cat_id}.json", 'w', encoding='utf-8') as f:
             json.dump({"metas": data["metas"]}, f, ensure_ascii=False, indent=2)
 
-    # manifest.json (Katalog ID'leri dosya isimleriyle aynı)
+    # manifest.json
     manifest = {
         "id": "MoOnCrOwN-catalog",
         "version": "1.0.0",
@@ -107,9 +127,9 @@ def process_stremio_addon(m3u_file):
         "idPrefixes": ["ch_"],
         "catalogs": [
             {
-                "id": k, # cat_haberler gibi
+                "id": k,
                 "type": "tv", 
-                "name": f"📺 {v['display_name']}" # "Haberler" gibi
+                "name": f"📺 {v['display_name']}"
             } for k, v in categories.items()
         ]
     }
@@ -117,7 +137,7 @@ def process_stremio_addon(m3u_file):
     with open("manifest.json", 'w', encoding='utf-8') as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-    print(f"Bitti! {len(categories)} adet katalog ve manifest başarıyla güncellendi.")
+    print(f"Bitti! {len(channels)} kanal ve {len(categories)} kategori işlendi. Artık dosyalar temizlendi.")
 
 if __name__ == "__main__":
     process_stremio_addon("liste.m3u")
