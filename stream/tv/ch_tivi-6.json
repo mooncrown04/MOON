@@ -1,8 +1,13 @@
 {
   "streams": [
     {
-      "title": "TIVI 6 - Yayın Kaynağı",
-      "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8"
+      "name": "TIVI 6",
+      "title": "TIVI 6 | Ulusal Kanallar",
+      "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "ch_tivi-6"
+      }
     }
   ]
 }

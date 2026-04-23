@@ -1,8 +1,13 @@
 {
   "streams": [
     {
-      "title": "NOW - Yayın Kaynağı",
-      "url": "https://tinyurl.com/SyndraxicFOX"
+      "name": "NOW",
+      "title": "NOW | Ulusal Kanallar",
+      "url": "https://tinyurl.com/SyndraxicFOX",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "ch_now"
+      }
     }
   ]
 }

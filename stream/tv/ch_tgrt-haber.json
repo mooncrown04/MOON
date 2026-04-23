@@ -1,12 +1,22 @@
 {
   "streams": [
     {
-      "title": "TGRT HABER - Yayın Kaynağı",
-      "url": "https://tgrthaber-live.daioncdn.net/tgrthaber/tgrthaber_720p.m3u8"
+      "name": "TGRT HABER",
+      "title": "TGRT HABER | Haberler",
+      "url": "https://tgrthaber-live.daioncdn.net/tgrthaber/tgrthaber_720p.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "ch_tgrt-haber"
+      }
     },
     {
-      "title": "TGRT HABER - Yayın Kaynağı",
-      "url": "https://canli.tgrthaber.com/tgrt.m3u8"
+      "name": "TGRT HABER",
+      "title": "TGRT HABER | Haberler",
+      "url": "https://canli.tgrthaber.com/tgrt.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "ch_tgrt-haber"
+      }
     }
   ]
 }
