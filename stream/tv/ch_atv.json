@@ -1,8 +1,7 @@
 {
   "streams": [
     {
-      "name": "ATV (Kaynak 1)",
-      "title": "ATV | DİĞER",
+      "title": "ATV - Yayın Kaynağı",
       "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_720p.m3u8"
     }
   ]

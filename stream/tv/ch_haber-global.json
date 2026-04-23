@@ -1,8 +1,7 @@
 {
   "streams": [
     {
-      "name": "HABER GLOBAL (Kaynak 1)",
-      "title": "HABER GLOBAL | DİĞER",
+      "title": "HABER GLOBAL - Yayın Kaynağı",
       "url": "https://tv.ensonhaber.com/haberglobal/haberglobal_720p.m3u8"
     }
   ]

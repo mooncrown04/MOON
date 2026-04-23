@@ -1,8 +1,7 @@
 {
   "streams": [
     {
-      "name": "TIVI 6 (Kaynak 1)",
-      "title": "TIVI 6 | DİĞER",
+      "title": "TIVI 6 - Yayın Kaynağı",
       "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8"
     }
   ]

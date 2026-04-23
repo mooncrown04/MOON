@@ -1,8 +1,7 @@
 {
   "streams": [
     {
-      "name": "KANAL 7 AVRUPA (Kaynak 1)",
-      "title": "KANAL 7 AVRUPA | DİĞER",
+      "title": "KANAL 7 AVRUPA - Yayın Kaynağı",
       "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8"
     }
   ]

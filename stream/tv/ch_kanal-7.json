@@ -1,8 +1,7 @@
 {
   "streams": [
     {
-      "name": "KANAL 7 (Kaynak 1)",
-      "title": "KANAL 7 | DİĞER",
+      "title": "KANAL 7 - Yayın Kaynağı",
       "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7_1080p.m3u8"
     }
   ]

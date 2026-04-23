@@ -1,8 +1,7 @@
 {
   "streams": [
     {
-      "name": "360 (Kaynak 1)",
-      "title": "360 | DİĞER",
+      "title": "360 - Yayın Kaynağı",
       "url": "https://tv.ensonhaber.com/tv360/tv360.m3u8"
     }
   ]

@@ -1,8 +1,7 @@
 {
   "streams": [
     {
-      "name": "TRT 1 (Kaynak 1)",
-      "title": "TRT 1 | DİĞER",
+      "title": "TRT 1 - Yayın Kaynağı",
       "url": "https://tv-trt1-esdai.medya.trt.com.tr/master.m3u8"
     }
   ]

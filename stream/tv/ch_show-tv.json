@@ -1,8 +1,7 @@
 {
   "streams": [
     {
-      "name": "SHOW TV (Kaynak 1)",
-      "title": "SHOW TV | DİĞER",
+      "title": "SHOW TV - Yayın Kaynağı",
       "url": "https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558"
     }
   ]

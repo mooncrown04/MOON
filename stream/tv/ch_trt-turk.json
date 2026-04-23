@@ -1,8 +1,7 @@
 {
   "streams": [
     {
-      "name": "TRT TURK (Kaynak 1)",
-      "title": "TRT TURK | DİĞER",
+      "title": "TRT TURK - Yayın Kaynağı",
       "url": "https://tv-trtturk.medya.trt.com.tr/master_720.m3u8"
     }
   ]

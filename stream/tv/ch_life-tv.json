@@ -1,8 +1,7 @@
 {
   "streams": [
     {
-      "name": "LIFE TV (Kaynak 1)",
-      "title": "LIFE TV | DİĞER",
+      "title": "LIFE TV - Yayın Kaynağı",
       "url": "https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8"
     }
   ]
