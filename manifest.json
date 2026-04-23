@@ -2,7 +2,7 @@
   "id": "MoOnCrOwN-catalog",
   "version": "1.0.0",
   "name": "MoOnCrOwN-0o0-tv",
-  "description": "MoOnCrOwN Canlı Yayınlar",
+  "description": "MoOnCrOwN Canlı TV Kanalları",
   "resources": [
     "catalog",
     "meta",
@@ -16,14 +16,9 @@
   ],
   "catalogs": [
     {
-      "id": "cat_ulusal-kanallar",
+      "id": "cat_diger",
       "type": "tv",
-      "name": "📺 Ulusal Kanallar"
-    },
-    {
-      "id": "cat_haberler",
-      "type": "tv",
-      "name": "📺 Haberler"
+      "name": "📺 DİĞER"
     }
   ]
 }

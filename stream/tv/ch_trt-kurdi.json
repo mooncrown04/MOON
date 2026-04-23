@@ -1,8 +1,13 @@
 {
   "streams": [
     {
-      "title": "TRT KURDİ - Yayın Kaynağı",
-      "url": "https://tv-trtkurdi.medya.trt.com.tr/master_720.m3u8"
+      "name": "TRT KURDİ",
+      "title": "TRT KURDİ | DİĞER",
+      "url": "https://tv-trtkurdi.medya.trt.com.tr/master_720.m3u8",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "ch_trt-kurdi"
+      }
     }
   ]
 }
