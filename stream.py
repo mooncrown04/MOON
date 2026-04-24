@@ -33,7 +33,7 @@ def process_stremio_addon(m3u_file):
     category_map = {
         "ulusal": "📺 Ulusal Kanallar",
         "spor": "⚽ Spor Dünyası",
-        "haber": "📰 Haber",
+        "haber": "📰 Haberler",
         "sinema": "🎬 Sinema & Dizi",
         "dizi": "🎬 Sinema & Dizi",
         "belgesel": "🦒 Belgesel & Yaşam",
