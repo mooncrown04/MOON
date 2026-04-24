@@ -1,0 +1,13 @@
+{
+  "streams": [
+    {
+      "name": "BOR FM",
+      "title": "BOR FM | Arabesk Radyolar",
+      "url": "https://tinyurl.com/SyndraxicBORfm",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "ch_bor-fm"
+      }
+    }
+  ]
+}

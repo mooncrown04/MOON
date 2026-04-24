@@ -1,0 +1,13 @@
+{
+  "streams": [
+    {
+      "name": "ARABESK FM",
+      "title": "ARABESK FM | Arabesk Radyolar",
+      "url": "https://tinyurl.com/SyndraxicArabeskFM",
+      "behaviorHints": {
+        "notClickable": false,
+        "bingeGroup": "ch_arabesk-fm"
+      }
+    }
+  ]
+}

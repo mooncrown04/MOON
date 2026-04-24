@@ -1,0 +1,32 @@
+{
+  "metas": [
+    {
+      "id": "ch_arabesk-fm",
+      "type": "tv",
+      "name": "ARABESK FM",
+      "poster": "https://via.placeholder.com/300",
+      "description": "Arabesk Radyolar kategorisinde yayın."
+    },
+    {
+      "id": "ch_bor-fm",
+      "type": "tv",
+      "name": "BOR FM",
+      "poster": "https://via.placeholder.com/300",
+      "description": "Arabesk Radyolar kategorisinde yayın."
+    },
+    {
+      "id": "ch_damar-fm",
+      "type": "tv",
+      "name": "DAMAR FM",
+      "poster": "https://via.placeholder.com/300",
+      "description": "Arabesk Radyolar kategorisinde yayın."
+    },
+    {
+      "id": "ch_karesi-radyo",
+      "type": "tv",
+      "name": "KARESİ RADYO",
+      "poster": "https://via.placeholder.com/300",
+      "description": "Arabesk Radyolar kategorisinde yayın."
+    }
+  ]
+}

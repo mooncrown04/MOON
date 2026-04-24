@@ -25,6 +25,31 @@
       "id": "cat_haberler",
       "type": "tv",
       "name": "📺 Haberler"
+    },
+    {
+      "id": "cat_spor",
+      "type": "tv",
+      "name": "⚽ Spor Dünyası"
+    },
+    {
+      "id": "cat_animasyon",
+      "type": "tv",
+      "name": "📺 Animasyon"
+    },
+    {
+      "id": "cat_arabesk-radyolar",
+      "type": "tv",
+      "name": "📺 Arabesk Radyolar"
+    },
+    {
+      "id": "cat_belgesel",
+      "type": "tv",
+      "name": "🦒 Belgesel & Yaşam"
+    },
+    {
+      "id": "cat_digerleri",
+      "type": "tv",
+      "name": "📺 Digerleri"
     }
   ]
 }
