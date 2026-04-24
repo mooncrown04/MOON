@@ -36,8 +36,10 @@ def process_stremio_addon(m3u_file):
         "haberler": "📰 Haber",
         "sinema": "🎬 Sinema & Dizi",
         "dizi": "🎬 Sinema & Dizi",
+        "film": "🎞️ FİLM",
         "belgesel": "🦒 Belgesel & Yaşam",
         "muzik": "🎵 Müzik",
+        "Animasyon": "🎨 Animasyon",
         "cocuk": "🧸 Çocuk",
         "yetiskin": "🔞 Yetişkin",
         "diger": "📡 Diğer Kanallar"
