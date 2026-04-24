@@ -1,7 +1,7 @@
 {
-  "id": "MoOnCrOwN-catalog",
+  "id": "MoOnCrOwN-KATALOG",
   "version": "1.0.0",
-  "name": "MoOnCrOwN-0o0-tv",
+  "name": "MoOnCrOwN-TV",
   "description": "MoOnCrOwN Canlı Yayınlar",
   "resources": [
     "catalog",
@@ -12,7 +12,8 @@
     "tv"
   ],
   "idPrefixes": [
-    "ch_"
+    "ch",
+    "iptv_"
   ],
   "catalogs": [
     {
