@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "id": "ch_life-tv",
-    "type": "tv",
-    "name": "LIFE TV",
-    "poster": "https://i.ibb.co/9hCVNks/life-tv.png",
-    "background": "https://i.ibb.co/9hCVNks/life-tv.png",
-    "description": "LIFE TV"
-  }
-}
+{"meta": {"id": "ch_life-tv", "type": "tv", "name": "LIFE TV", "poster": "https://i.ibb.co/9hCVNks/life-tv.png", "background": "https://i.ibb.co/9hCVNks/life-tv.png"}}

@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "id": "ch_fb-tv",
-    "type": "tv",
-    "name": "FB TV",
-    "poster": "https://i.ibb.co/R3q43dk/sportstv.png",
-    "background": "https://i.ibb.co/R3q43dk/sportstv.png",
-    "description": "FB TV"
-  }
-}
+{"meta": {"id": "ch_fb-tv", "type": "tv", "name": "FB TV", "poster": "https://i.ibb.co/R3q43dk/sportstv.png", "background": "https://i.ibb.co/R3q43dk/sportstv.png"}}

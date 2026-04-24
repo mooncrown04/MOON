@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "id": "ch_haber-global",
-    "type": "tv",
-    "name": "HABER GLOBAL",
-    "poster": "https://zdi2vdd5r0wt.merlincdn.net/content/J/B7/246144/logo.png",
-    "background": "https://zdi2vdd5r0wt.merlincdn.net/content/J/B7/246144/logo.png",
-    "description": "HABER GLOBAL"
-  }
-}
+{"meta": {"id": "ch_haber-global", "type": "tv", "name": "HABER GLOBAL", "poster": "https://zdi2vdd5r0wt.merlincdn.net/content/J/B7/246144/logo.png", "background": "https://zdi2vdd5r0wt.merlincdn.net/content/J/B7/246144/logo.png"}}

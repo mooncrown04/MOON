@@ -1,11 +1,1 @@
-{
-  "metas": [
-    {
-      "id": "ch_show-tv",
-      "type": "tv",
-      "name": "SHOW TV",
-      "poster": "https://zdi2vdd5r0wt.merlincdn.net/content/X/rT/245949/logo.png",
-      "description": "Digerleri kategorisinde yayın."
-    }
-  ]
-}
+{"metas": [{"id": "ch_tv-8", "type": "tv", "name": "TV 8", "poster": "http://hd200.gliptv.com/menu/epg/imagesNew/cim_304475.png", "description": "Digerleri kategorisinde yayın."}]}

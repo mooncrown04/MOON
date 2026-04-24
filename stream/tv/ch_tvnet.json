@@ -1,13 +1,1 @@
-{
-  "streams": [
-    {
-      "name": "TVNET",
-      "title": "TVNET | Haberler",
-      "url": "https://mn-nl.mncdn.com/tvnet/tvnet/playlist.m3u8",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_tvnet"
-      }
-    }
-  ]
-}
+{"streams": [{"name": "TVNET", "title": "TVNET | Haberler", "url": "https://mn-nl.mncdn.com/tvnet/tvnet/playlist.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "ch_tvnet"}}]}

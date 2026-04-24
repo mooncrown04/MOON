@@ -2,7 +2,7 @@
   "id": "MoOnCrOwN-KATALOG",
   "version": "1.0.0",
   "name": "MoOnCrOwN-TV",
-  "description": "MoOnCrOwN Canlı Yayınlar",
+  "description": "MoOnCrOwN Canlı Yayınlar (İlk 100 Kanal)",
   "resources": [
     "catalog",
     "meta",
@@ -12,8 +12,7 @@
     "tv"
   ],
   "idPrefixes": [
-    "ch",
-    "iptv_"
+    "ch"
   ],
   "catalogs": [
     {
@@ -34,7 +33,7 @@
     {
       "id": "cat_animasyon",
       "type": "tv",
-      "name": "📺 Animasyon"
+      "name": "🎨 Animasyon"
     },
     {
       "id": "cat_arabesk-radyolar",
@@ -50,6 +49,76 @@
       "id": "cat_digerleri",
       "type": "tv",
       "name": "📺 Digerleri"
+    },
+    {
+      "id": "cat_freeshot-albania--kosovo",
+      "type": "tv",
+      "name": "📺 Freeshot Albania & Kosovo"
+    },
+    {
+      "id": "cat_freeshot-arabia",
+      "type": "tv",
+      "name": "📺 Freeshot Arabia"
+    },
+    {
+      "id": "cat_freeshot-argentina",
+      "type": "tv",
+      "name": "📺 Freeshot Argentina"
+    },
+    {
+      "id": "cat_freeshot-belgium--netherlands",
+      "type": "tv",
+      "name": "📺 Freeshot Belgium & Netherlands"
+    },
+    {
+      "id": "cat_freeshot-brasil",
+      "type": "tv",
+      "name": "📺 Freeshot Brasil"
+    },
+    {
+      "id": "cat_freeshot-bulgaria",
+      "type": "tv",
+      "name": "📺 Freeshot Bulgaria"
+    },
+    {
+      "id": "cat_freeshot-canada",
+      "type": "tv",
+      "name": "📺 Freeshot Canada"
+    },
+    {
+      "id": "cat_freeshot-cyprus--greece",
+      "type": "tv",
+      "name": "📺 Freeshot Cyprus & Greece"
+    },
+    {
+      "id": "cat_freeshot-czech--slovak",
+      "type": "tv",
+      "name": "📺 Freeshot Czech & Slovak"
+    },
+    {
+      "id": "cat_freeshot-ex-yu",
+      "type": "tv",
+      "name": "📺 Freeshot Ex-Yu"
+    },
+    {
+      "id": "cat_freeshot-france",
+      "type": "tv",
+      "name": "📺 Freeshot France"
+    },
+    {
+      "id": "cat_freeshot-germany",
+      "type": "tv",
+      "name": "📺 Freeshot Germany"
+    },
+    {
+      "id": "cat_freeshot-italia",
+      "type": "tv",
+      "name": "📺 Freeshot Italia"
+    },
+    {
+      "id": "cat_freeshot-poland",
+      "type": "tv",
+      "name": "📺 Freeshot Poland"
     }
   ]
 }

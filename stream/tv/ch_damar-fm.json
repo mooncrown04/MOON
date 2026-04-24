@@ -1,13 +1,1 @@
-{
-  "streams": [
-    {
-      "name": "DAMAR FM",
-      "title": "DAMAR FM | Arabesk Radyolar",
-      "url": "https://tinyurl.com/SyndraxicDAMARfm",
-      "behaviorHints": {
-        "notClickable": false,
-        "bingeGroup": "ch_damar-fm"
-      }
-    }
-  ]
-}
+{"streams": [{"name": "DAMAR FM", "title": "DAMAR FM | Arabesk Radyolar", "url": "https://tinyurl.com/SyndraxicDAMARfm", "behaviorHints": {"notClickable": false, "bingeGroup": "ch_damar-fm"}}]}
