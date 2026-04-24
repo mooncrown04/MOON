@@ -14,7 +14,6 @@ def slugify(text):
 
 def process_stremio_addon(m3u_file):
     # --- KRİTİK: FAZLA DOSYALARI SİLME ---
-    # Her çalıştığında klasörleri silip baştan oluşturur, böylece m3u'da olmayanlar silinmiş olur.
     folders = ["stream/tv", "meta/tv", "catalog/tv"]
     for folder_path in ["stream", "meta", "catalog"]:
         if os.path.exists(folder_path):
@@ -29,6 +28,20 @@ def process_stremio_addon(m3u_file):
 
     channels = {}
     categories = {}
+
+    # Kategori isimlerini ve emojilerini eşleştiren sözlük
+    category_map = {
+        "ulusal": "📺 Ulusal Kanallar",
+        "spor": "⚽ Spor Dünyası",
+        "haber": "📰 Haber",
+        "sinema": "🎬 Sinema & Dizi",
+        "dizi": "🎬 Sinema & Dizi",
+        "belgesel": "🦒 Belgesel & Yaşam",
+        "muzik": "🎵 Müzik",
+        "cocuk": "🧸 Çocuk",
+        "yetiskin": "🔞 Yetişkin",
+        "diger": "📡 Diğer Kanallar"
+    }
 
     with open(m3u_file, 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -54,7 +67,6 @@ def process_stremio_addon(m3u_file):
             chan_id = f"ch_{slugify(current_info['name'])}"
             cat_id = f"cat_{slugify(current_info['group'])}"
             
-            # 1. Kanalları Kaydet (Stream & Meta)
             if chan_id not in channels:
                 channels[chan_id] = {
                     "name": current_info['name'],
@@ -63,7 +75,6 @@ def process_stremio_addon(m3u_file):
                     "streams": []
                 }
             
-            # --- DÜZELTME: STREAM TITLE (Kanal Adı | Kategori Adı) ---
             channels[chan_id]["streams"].append({
                 "name": current_info['name'],
                 "title": f"{current_info['name']} | {current_info['group']}",
@@ -74,10 +85,13 @@ def process_stremio_addon(m3u_file):
                 }
             })
 
-            # 2. Katalogları Kaydet
             if cat_id not in categories:
+                # Kategori ismini belirle
+                raw_group = slugify(current_info['group'])
+                display_name = category_map.get(raw_group, f"📺 {current_info['group']}")
+                
                 categories[cat_id] = {
-                    "display_name": current_info['group'],
+                    "display_name": display_name,
                     "metas": []
                 }
             
@@ -93,7 +107,6 @@ def process_stremio_addon(m3u_file):
 
     # --- DOSYALARI OLUŞTUR ---
 
-    # stream ve meta dosyaları
     for cid, info in channels.items():
         with open(f"stream/tv/{cid}.json", 'w', encoding='utf-8') as f:
             json.dump({"streams": info["streams"]}, f, ensure_ascii=False, indent=2)
@@ -111,7 +124,6 @@ def process_stremio_addon(m3u_file):
         with open(f"meta/tv/{cid}.json", 'w', encoding='utf-8') as f:
             json.dump(meta, f, ensure_ascii=False, indent=2)
 
-    # catalog dosyaları
     for cat_id, data in categories.items():
         with open(f"catalog/tv/{cat_id}.json", 'w', encoding='utf-8') as f:
             json.dump({"metas": data["metas"]}, f, ensure_ascii=False, indent=2)
@@ -129,7 +141,7 @@ def process_stremio_addon(m3u_file):
             {
                 "id": k,
                 "type": "tv", 
-                "name": f"📺 {v['display_name']}"
+                "name": v['display_name'] # Emoji ve isim zaten display_name içinde
             } for k, v in categories.items()
         ]
     }
