@@ -118,13 +118,13 @@ def process_stremio_addon(m3u_file):
 
     # manifest.json
     manifest = {
-        "id": "MoOnCrOwN-catalog",
+        "id": "MoOnCrOwN-KATALOG",
         "version": "1.0.0",
-        "name": "MoOnCrOwN-0o0-tv",
+        "name": "MoOnCrOwN-TV",
         "description": "MoOnCrOwN Canlı Yayınlar",
         "resources": ["catalog", "meta", "stream"],
         "types": ["tv"],
-        "idPrefixes": ["ch_"],
+        "idPrefixes": ["ch","iptv_"],
         "catalogs": [
             {
                 "id": k,
