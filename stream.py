@@ -5,13 +5,20 @@ import shutil
 import requests
 
 def slugify(text):
-    """ID ve Dosya adları için metni temizler."""
-    if not text: return "diger"
-    text = text.lower()
-    tr_map = str.maketrans("çığöşü ", "cigosu-")
-    text = text.translate(tr_map).replace(" ", "-")
-    text = re.sub(r'[^\w\-]', '', text)
-    return text.strip("-")
+    """ID ve Dosya adları için metni temizler, büyük harf yapar ve alt tire kullanır."""
+    if not text: return "DIGER"
+    # Türkçe karakter dönüşümü
+    tr_map = str.maketrans("çığöşüÇİĞÖŞÜ", "cigosucigosu")
+    text = text.translate(tr_map)
+    # Büyük harfe çevir
+    text = text.upper()
+    # Boşlukları ve tireleri alt tireye çevir
+    text = text.replace(" ", "_").replace("-", "_")
+    # Alfanümerik ve alt tire dışındakileri temizle
+    text = re.sub(r'[^\w]', '', text)
+    # Çift alt tire oluşursa teke indir ve kenarları temizle
+    text = re.sub(r'_+', '_', text)
+    return text.strip("_")
 
 def process_stremio_addon():
     # --- 1. LİSTEYİ İNDİR ---
@@ -39,26 +46,26 @@ def process_stremio_addon():
     categories = {}
     channel_count = 0 
 
+    # Kategori eşleşmeleri (Key'ler slugify formatında olmalı)
     category_map = {
-        "ulusal": "📺 Ulusal Kanallar",
-        "spor": "⚽ Spor Dünyası",
-        "haberler": "📰 Haber",
-        "sinema": "🎬 Sinema & Dizi",
-        "dizi": "🎬 Sinema & Dizi",
-        "film": "🎞️ FİLM",
-        "belgesel": "🦒 Belgesel & Yaşam",
-        "muzik": "🎵 Müzik",
-        "animasyon": "🎨 Animasyon",
-        "cocuk": "🧸 Çocuk",
-        "yetiskin": "🔞 Yetişkin",
-        "diger": "📡 Diğer Kanallar"
+        "ULUSAL": "📺 Ulusal Kanallar",
+        "SPOR": "⚽ Spor Dünyası",
+        "HABERLER": "📰 Haber",
+        "SINEMA": "🎬 Sinema & Dizi",
+        "DIZI": "🎬 Sinema & Dizi",
+        "FILM": "🎞️ FİLM",
+        "BELGESEL": "🦒 Belgesel & Yaşam",
+        "MUZIK": "🎵 Müzik",
+        "ANIMASYON": "🎨 Animasyon",
+        "COCUK": "🧸 Çocuk",
+        "YETISKIN": "🔞 Yetişkin",
+        "DIGER": "📡 Diğer Kanallar"
     }
 
     lines = m3u_content.splitlines()
     current_info = None
 
     for line in lines:
-        # Sınır kontrolü
         if channel_count >= 100:
             break
 
@@ -68,19 +75,20 @@ def process_stremio_addon():
             group_match = re.search(r'group-title="([^"]+)"', line)
             logo_match = re.search(r'tvg-logo="([^"]+)"', line)
             name_parts = line.split(",")
-            name = name_parts[-1].strip() if len(name_parts) > 1 else "Bilinmeyen Kanal"
+            # Kanal adını direkt büyük harf yapıyoruz
+            name = name_parts[-1].strip().upper() if len(name_parts) > 1 else "BILINMEYEN KANAL"
             
             current_info = {
-                "group": group_match.group(1) if group_match else "DİĞER",
+                "group": group_match.group(1).upper() if group_match else "DIGER",
                 "logo": logo_match.group(1) if logo_match else "https://via.placeholder.com/300",
                 "name": name
             }
         
         elif line.startswith("http") and current_info:
-            chan_id = f"ch_{slugify(current_info['name'])}"
-            cat_id = f"cat_{slugify(current_info['group'])}"
+            # ID'leri büyük harf ve alt tireli yapıyoruz
+            chan_id = f"CH_{slugify(current_info['name'])}"
+            cat_id = f"CAT_{slugify(current_info['group'])}"
             
-            # Daha önce eklenmemişse işleme al
             if chan_id not in channels:
                 channels[chan_id] = {
                     "name": current_info['name'],
@@ -96,8 +104,8 @@ def process_stremio_addon():
                 channel_count += 1 
 
                 if cat_id not in categories:
-                    raw_group = slugify(current_info['group'])
-                    display_name = category_map.get(raw_group, f"📺 {current_info['group']}")
+                    raw_group_slug = slugify(current_info['group'])
+                    display_name = category_map.get(raw_group_slug, f"📺 {current_info['group']}")
                     categories[cat_id] = {"display_name": display_name, "metas": []}
                 
                 categories[cat_id]["metas"].append({
@@ -105,7 +113,7 @@ def process_stremio_addon():
                     "type": "tv",
                     "name": current_info['name'],
                     "poster": current_info['logo'],
-                    "description": f"{current_info['group']} kategorisinde yayın."
+                    "description": f"{current_info['group']} KATEGORİSİNDE YAYIN."
                 })
             current_info = None
 
@@ -128,20 +136,20 @@ def process_stremio_addon():
             json.dump({"metas": data["metas"]}, f, ensure_ascii=False)
 
     manifest = {
-        "id": "MoOnCrOwN-KATALOG",
+        "id": "MOONCROWN_KATALOG",
         "version": "1.0.0",
-        "name": "MoOnCrOwN-TV",
-        "description": "MoOnCrOwN Canlı Yayınlar (İlk 100 Kanal)",
+        "name": "MOONCROWN_TV",
+        "description": "MOONCROWN CANLI YAYINLAR (ILK 100 KANAL)",
         "resources": ["catalog", "meta", "stream"],
         "types": ["tv"],
-        "idPrefixes": ["ch"],
+        "idPrefixes": ["CH_"],
         "catalogs": [{"id": k, "type": "tv", "name": v['display_name']} for k, v in categories.items()]
     }
     
     with open("manifest.json", 'w', encoding='utf-8') as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-    print(f"İşlem Tamamlandı! {channel_count} kanal eklendi.")
+    print(f"İşlem Tamamlandı! {channel_count} kanal eklendi ve tümü büyük harfe/alt tireye dönüştürüldü.")
 
 if __name__ == "__main__":
     process_stremio_addon()
