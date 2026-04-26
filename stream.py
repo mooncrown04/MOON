@@ -5,20 +5,22 @@ import shutil
 import requests
 
 def slugify(text):
-    """ID ve Dosya adları için metni temizler, büyük harf yapar ve alt tire kullanır."""
+    """ID ve Dosya adları için metni temizler, büyük harf yapar ve tireleri boşlukla değiştirir."""
     if not text: return "DIGER"
     # Türkçe karakter dönüşümü
     tr_map = str.maketrans("çığöşüÇİĞÖŞÜ", "cigosucigosu")
     text = text.translate(tr_map)
     # Büyük harfe çevir
     text = text.upper()
-    # Boşlukları ve tireleri alt tireye çevir
-    text = text.replace(" ", "_").replace("-", "_")
-    # Alfanümerik ve alt tire dışındakileri temizle
-    text = re.sub(r'[^\w]', '', text)
-    # Çift alt tire oluşursa teke indir ve kenarları temizle
-    text = re.sub(r'_+', '_', text)
-    return text.strip("_")
+    # Tireleri (-) boşlukla değiştiriyoruz
+    text = text.replace("-", " ")
+    # Sadece alfanümerik karakterleri ve boşlukları koru, diğerlerini temizle
+    text = re.sub(r'[^\w\s]', '', text)
+    # Birden fazla boşluğu teke indir ve kenar boşluklarını temizle
+    text = re.sub(r'\s+', ' ', text).strip()
+    # ID'lerde boşluk kalmaması için (dosya sistemi uyumu) iç kısımdaki boşlukları alt tire yapabiliriz 
+    # ama istersen tamamen temizleyebilirim. Şimdilik sadece boşlukla değiştirme kuralını uyguladım.
+    return text.replace(" ", "_") # ID teknik olarak boşluk barındıramaz, bu yüzden klasörleme için alt tireye döner.
 
 def process_stremio_addon():
     # --- 1. LİSTEYİ İNDİR ---
@@ -46,7 +48,6 @@ def process_stremio_addon():
     categories = {}
     channel_count = 0 
 
-    # Kategori eşleşmeleri (Key'ler slugify formatında olmalı)
     category_map = {
         "ULUSAL": "📺 Ulusal Kanallar",
         "SPOR": "⚽ Spor Dünyası",
@@ -75,17 +76,16 @@ def process_stremio_addon():
             group_match = re.search(r'group-title="([^"]+)"', line)
             logo_match = re.search(r'tvg-logo="([^"]+)"', line)
             name_parts = line.split(",")
-            # Kanal adını direkt büyük harf yapıyoruz
-            name = name_parts[-1].strip().upper() if len(name_parts) > 1 else "BILINMEYEN KANAL"
+            # Kanal adındaki tireleri boşlukla değiştir ve BÜYÜK HARF yap
+            name = name_parts[-1].strip().replace("-", " ").upper() if len(name_parts) > 1 else "BILINMEYEN KANAL"
             
             current_info = {
-                "group": group_match.group(1).upper() if group_match else "DIGER",
+                "group": group_match.group(1).replace("-", " ").upper() if group_match else "DIGER",
                 "logo": logo_match.group(1) if logo_match else "https://via.placeholder.com/300",
                 "name": name
             }
         
         elif line.startswith("http") and current_info:
-            # ID'leri büyük harf ve alt tireli yapıyoruz
             chan_id = f"CH_{slugify(current_info['name'])}"
             cat_id = f"CAT_{slugify(current_info['group'])}"
             
@@ -113,7 +113,7 @@ def process_stremio_addon():
                     "type": "tv",
                     "name": current_info['name'],
                     "poster": current_info['logo'],
-                    "description": f"{current_info['group']} KATEGORİSİNDE YAYIN."
+                    "description": f"{current_info['group']} KATEGORISINDE YAYIN."
                 })
             current_info = None
 
@@ -149,7 +149,7 @@ def process_stremio_addon():
     with open("manifest.json", 'w', encoding='utf-8') as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-    print(f"İşlem Tamamlandı! {channel_count} kanal eklendi ve tümü büyük harfe/alt tireye dönüştürüldü.")
+    print(f"İşlem Tamamlandı! {channel_count} kanal güncellendi. Tireler boşluğa çevrildi.")
 
 if __name__ == "__main__":
     process_stremio_addon()
