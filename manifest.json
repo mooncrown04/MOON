@@ -1,8 +1,8 @@
 {
-  "id": "MoOnCrOwN-KATALOG",
+  "id": "MOONCROWN_KATALOG",
   "version": "1.0.0",
-  "name": "MoOnCrOwN-TV",
-  "description": "MoOnCrOwN Canlı Yayınlar (İlk 100 Kanal)",
+  "name": "MOONCROWN_TV",
+  "description": "MOONCROWN CANLI YAYINLAR (ILK 100 KANAL)",
   "resources": [
     "catalog",
     "meta",
@@ -12,113 +12,113 @@
     "tv"
   ],
   "idPrefixes": [
-    "ch"
+    "CH_"
   ],
   "catalogs": [
     {
-      "id": "cat_ulusal-kanallar",
+      "id": "CAT_ULUSAL_KANALLAR",
       "type": "tv",
-      "name": "📺 Ulusal Kanallar"
+      "name": "📺 ULUSAL KANALLAR"
     },
     {
-      "id": "cat_haberler",
+      "id": "CAT_HABERLER",
       "type": "tv",
       "name": "📰 Haber"
     },
     {
-      "id": "cat_spor",
+      "id": "CAT_SPOR",
       "type": "tv",
       "name": "⚽ Spor Dünyası"
     },
     {
-      "id": "cat_animasyon",
+      "id": "CAT_ANIMASYON",
       "type": "tv",
       "name": "🎨 Animasyon"
     },
     {
-      "id": "cat_arabesk-radyolar",
+      "id": "CAT_ARABESK_RADYOLAR",
       "type": "tv",
-      "name": "📺 Arabesk Radyolar"
+      "name": "📺 ARABESK RADYOLAR"
     },
     {
-      "id": "cat_belgesel",
+      "id": "CAT_BELGESEL",
       "type": "tv",
       "name": "🦒 Belgesel & Yaşam"
     },
     {
-      "id": "cat_digerleri",
+      "id": "CAT_DIGERLERI",
       "type": "tv",
-      "name": "📺 Digerleri"
+      "name": "📺 DIGERLERI"
     },
     {
-      "id": "cat_freeshot-albania--kosovo",
+      "id": "CAT_FREESHOT_ALBANIA_KOSOVO",
       "type": "tv",
-      "name": "📺 Freeshot Albania & Kosovo"
+      "name": "📺 FREESHOT ALBANIA & KOSOVO"
     },
     {
-      "id": "cat_freeshot-arabia",
+      "id": "CAT_FREESHOT_ARABIA",
       "type": "tv",
-      "name": "📺 Freeshot Arabia"
+      "name": "📺 FREESHOT ARABIA"
     },
     {
-      "id": "cat_freeshot-argentina",
+      "id": "CAT_FREESHOT_ARGENTINA",
       "type": "tv",
-      "name": "📺 Freeshot Argentina"
+      "name": "📺 FREESHOT ARGENTINA"
     },
     {
-      "id": "cat_freeshot-belgium--netherlands",
+      "id": "CAT_FREESHOT_BELGIUM_NETHERLANDS",
       "type": "tv",
-      "name": "📺 Freeshot Belgium & Netherlands"
+      "name": "📺 FREESHOT BELGIUM & NETHERLANDS"
     },
     {
-      "id": "cat_freeshot-brasil",
+      "id": "CAT_FREESHOT_BRASIL",
       "type": "tv",
-      "name": "📺 Freeshot Brasil"
+      "name": "📺 FREESHOT BRASIL"
     },
     {
-      "id": "cat_freeshot-bulgaria",
+      "id": "CAT_FREESHOT_BULGARIA",
       "type": "tv",
-      "name": "📺 Freeshot Bulgaria"
+      "name": "📺 FREESHOT BULGARIA"
     },
     {
-      "id": "cat_freeshot-canada",
+      "id": "CAT_FREESHOT_CANADA",
       "type": "tv",
-      "name": "📺 Freeshot Canada"
+      "name": "📺 FREESHOT CANADA"
     },
     {
-      "id": "cat_freeshot-cyprus--greece",
+      "id": "CAT_FREESHOT_CYPRUS_GREECE",
       "type": "tv",
-      "name": "📺 Freeshot Cyprus & Greece"
+      "name": "📺 FREESHOT CYPRUS & GREECE"
     },
     {
-      "id": "cat_freeshot-czech--slovak",
+      "id": "CAT_FREESHOT_CZECH_SLOVAK",
       "type": "tv",
-      "name": "📺 Freeshot Czech & Slovak"
+      "name": "📺 FREESHOT CZECH & SLOVAK"
     },
     {
-      "id": "cat_freeshot-ex-yu",
+      "id": "CAT_FREESHOT_EX_YU",
       "type": "tv",
-      "name": "📺 Freeshot Ex-Yu"
+      "name": "📺 FREESHOT EX-YU"
     },
     {
-      "id": "cat_freeshot-france",
+      "id": "CAT_FREESHOT_FRANCE",
       "type": "tv",
-      "name": "📺 Freeshot France"
+      "name": "📺 FREESHOT FRANCE"
     },
     {
-      "id": "cat_freeshot-germany",
+      "id": "CAT_FREESHOT_GERMANY",
       "type": "tv",
-      "name": "📺 Freeshot Germany"
+      "name": "📺 FREESHOT GERMANY"
     },
     {
-      "id": "cat_freeshot-italia",
+      "id": "CAT_FREESHOT_ITALIA",
       "type": "tv",
-      "name": "📺 Freeshot Italia"
+      "name": "📺 FREESHOT ITALIA"
     },
     {
-      "id": "cat_freeshot-poland",
+      "id": "CAT_FREESHOT_POLAND",
       "type": "tv",
-      "name": "📺 Freeshot Poland"
+      "name": "📺 FREESHOT POLAND"
     }
   ]
 }
