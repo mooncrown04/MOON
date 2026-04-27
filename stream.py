@@ -140,6 +140,7 @@ def process_stremio_addon():
         "version": "1.0.0",
         "name": "MOONCROWN_TV",
         "description": "MOONCROWN CANLI YAYINLAR (ILK 100 KANAL)",
+        "logo": "https://st5.depositphotos.com/1041725/67731/v/380/depositphotos_677319750-stock-illustration-ararat-mountain-illustration-vector-white.jpg",
         "resources": ["catalog", "meta", "stream"],
         "types": ["tv"],
         "idPrefixes": ["CH_"],
