@@ -52,6 +52,26 @@
       "name": "📺 DIGERLERI"
     },
     {
+      "id": "CAT_FREESHOT_ALBANIA_KOSOVO",
+      "type": "tv",
+      "name": "📺 FREESHOT ALBANIA & KOSOVO"
+    },
+    {
+      "id": "CAT_FREESHOT_ARABIA",
+      "type": "tv",
+      "name": "📺 FREESHOT ARABIA"
+    },
+    {
+      "id": "CAT_FREESHOT_ARGENTINA",
+      "type": "tv",
+      "name": "📺 FREESHOT ARGENTINA"
+    },
+    {
+      "id": "CAT_FREESHOT_BELGIUM_NETHERLANDS",
+      "type": "tv",
+      "name": "📺 FREESHOT BELGIUM & NETHERLANDS"
+    },
+    {
       "id": "CAT_FREESHOT_BRASIL",
       "type": "tv",
       "name": "📺 FREESHOT BRASIL"
@@ -62,14 +82,29 @@
       "name": "📺 FREESHOT BULGARIA"
     },
     {
+      "id": "CAT_FREESHOT_CANADA",
+      "type": "tv",
+      "name": "📺 FREESHOT CANADA"
+    },
+    {
       "id": "CAT_FREESHOT_CYPRUS_GREECE",
       "type": "tv",
       "name": "📺 FREESHOT CYPRUS & GREECE"
     },
     {
+      "id": "CAT_FREESHOT_CZECH_SLOVAK",
+      "type": "tv",
+      "name": "📺 FREESHOT CZECH & SLOVAK"
+    },
+    {
       "id": "CAT_FREESHOT_EX_YU",
       "type": "tv",
       "name": "📺 FREESHOT EX YU"
+    },
+    {
+      "id": "CAT_FREESHOT_FRANCE",
+      "type": "tv",
+      "name": "📺 FREESHOT FRANCE"
     },
     {
       "id": "CAT_FREESHOT_GERMANY",
@@ -85,36 +120,6 @@
       "id": "CAT_FREESHOT_POLAND",
       "type": "tv",
       "name": "📺 FREESHOT POLAND"
-    },
-    {
-      "id": "CAT_FREESHOT_ROMANIA",
-      "type": "tv",
-      "name": "📺 FREESHOT ROMANIA"
-    },
-    {
-      "id": "CAT_FREESHOT_RUSSIA",
-      "type": "tv",
-      "name": "📺 FREESHOT RUSSIA"
-    },
-    {
-      "id": "CAT_FREESHOT_SCANDINAVIA",
-      "type": "tv",
-      "name": "📺 FREESHOT SCANDINAVIA"
-    },
-    {
-      "id": "CAT_FREESHOT_TURKEY",
-      "type": "tv",
-      "name": "📺 FREESHOT TURKEY"
-    },
-    {
-      "id": "CAT_FREESHOT_UNITED_KINGDOM",
-      "type": "tv",
-      "name": "📺 FREESHOT UNITED KINGDOM"
-    },
-    {
-      "id": "CAT_GLWIZ_PERSIAN",
-      "type": "tv",
-      "name": "📺 GLWIZ PERSIAN"
     }
   ]
 }
