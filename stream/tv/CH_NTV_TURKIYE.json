@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "NTV TURKIYE | Kaynak 1\n(GLWIZ TURK)", "url": "http://tv.smartglwiz.workers.dev/?ID=NTVTurkiye_HD"}]}
+{"streams": [{"name": "Kaynak 1", "title": "NTV TURKIYE | Kaynak 1\n(GLWIZ)", "url": "http://tv.smartglwiz.workers.dev/?ID=NTVTurkiye_HD", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_NTV_TURKIYE"}}]}

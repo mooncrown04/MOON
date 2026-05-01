@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "JIN TV | Kaynak 1\n(GLWIZ PERSIAN)", "url": "http://live.smartglwiz.workers.dev/?ID=JinTV_HD"}]}
+{"streams": [{"name": "Kaynak 1", "title": "JIN TV | Kaynak 1\n(GLWIZ)", "url": "http://live.smartglwiz.workers.dev/?ID=JinTV_HD", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_JIN_TV"}}]}

@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "РЕТРО ТВ | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=55"}]}
+{"streams": [{"name": "Kaynak 1", "title": "РЕТРО ТВ | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=55", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_РЕТРО_ТВ"}}]}

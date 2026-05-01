@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "PRIMA SPORT 5 | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/PrimaSport5.m3u8"}]}
+{"streams": [{"name": "Kaynak 1", "title": "PRIMA SPORT 5 | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/PrimaSport5.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_PRIMA_SPORT_5"}}]}

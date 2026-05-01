@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "AQLVOY | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=82"}]}
+{"streams": [{"name": "Kaynak 1", "title": "AQLVOY | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=82", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_AQLVOY"}}]}

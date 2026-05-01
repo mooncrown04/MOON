@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "T2 MOVIES | Kaynak 1\n(GLWIZ PERSIAN)", "url": "http://live.smartglwiz.workers.dev/?ID=T2Movies_HD"}]}
+{"streams": [{"name": "Kaynak 1", "title": "T2 MOVIES | Kaynak 1\n(GLWIZ)", "url": "http://live.smartglwiz.workers.dev/?ID=T2Movies_HD", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_T2_MOVIES"}}]}

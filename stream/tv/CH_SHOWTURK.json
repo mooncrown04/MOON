@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "SHOWTURK | Kaynak 1\n(GLWIZ TURK)", "url": "http://tv.smartglwiz.workers.dev/?ID=ShowTurk_HD"}]}
+{"streams": [{"name": "Kaynak 1", "title": "SHOWTURK | Kaynak 1\n(GLWIZ)", "url": "http://tv.smartglwiz.workers.dev/?ID=ShowTurk_HD", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_SHOWTURK"}}]}

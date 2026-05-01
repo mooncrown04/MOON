@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "TRACE SPORT STARS | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=125"}]}
+{"streams": [{"name": "Kaynak 1", "title": "TRACE SPORT STARS | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=125", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_TRACE_SPORT_STARS"}}]}

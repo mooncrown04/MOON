@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "ATV | Kaynak 1\n(VIZITV)", "url": "http://live.cdn-vizi.workers.dev/?ID=2"}]}
+{"streams": [{"name": "Kaynak 1", "title": "ATV | Kaynak 1\n(VIZITV)", "url": "http://live.cdn-vizi.workers.dev/?ID=2", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_ATV"}}]}

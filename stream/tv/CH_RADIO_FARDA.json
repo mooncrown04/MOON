@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "RADIO FARDA | Kaynak 1\n(GLWIZ PERSIAN)", "url": "http://live.smartglwiz.workers.dev/?ID=RadioFardaTV_HD"}]}
+{"streams": [{"name": "Kaynak 1", "title": "RADIO FARDA | Kaynak 1\n(GLWIZ)", "url": "http://live.smartglwiz.workers.dev/?ID=RadioFardaTV_HD", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_RADIO_FARDA"}}]}

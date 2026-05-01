@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "TARAQQIYOT TV | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=76"}]}
+{"streams": [{"name": "Kaynak 1", "title": "TARAQQIYOT TV | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=76", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_TARAQQIYOT_TV"}}]}

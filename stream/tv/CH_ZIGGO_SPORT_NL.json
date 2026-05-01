@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "ZIGGO SPORT NL | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/ZiggoSport.m3u8"}]}
+{"streams": [{"name": "Kaynak 1", "title": "ZIGGO SPORT NL | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/ZiggoSport.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_ZIGGO_SPORT_NL"}}]}

@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "SKY SPORT 24 IT | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/SkySport24IT.m3u8"}]}
+{"streams": [{"name": "Kaynak 1", "title": "SKY SPORT 24 IT | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/SkySport24IT.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_SKY_SPORT_24_IT"}}]}

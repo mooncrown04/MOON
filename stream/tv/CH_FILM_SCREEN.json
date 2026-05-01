@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "FILM SCREEN | Kaynak 1\n(SINEMA)", "url": "https://edge-e3.evrideo.tv/f2dcbecf-5af0-47db-a82e-032112050a23_1000027346_HLS/manifest.m3u8"}]}
+{"streams": [{"name": "Kaynak 1", "title": "FILM SCREEN | Kaynak 1\n(SINEMA)", "url": "https://edge-e3.evrideo.tv/f2dcbecf-5af0-47db-a82e-032112050a23_1000027346_HLS/manifest.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_FILM_SCREEN"}}]}

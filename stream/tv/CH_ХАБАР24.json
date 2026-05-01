@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "ХАБАР24 | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=131"}]}
+{"streams": [{"name": "Kaynak 1", "title": "ХАБАР24 | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=131", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_ХАБАР24"}}]}

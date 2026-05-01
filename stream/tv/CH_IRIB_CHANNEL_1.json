@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "IRIB CHANNEL 1 | Kaynak 1\n(GLWIZ PERSIAN)", "url": "http://live.smartglwiz.workers.dev/?ID=IRIBChannel1_HD"}]}
+{"streams": [{"name": "Kaynak 1", "title": "IRIB CHANNEL 1 | Kaynak 1\n(GLWIZ)", "url": "http://live.smartglwiz.workers.dev/?ID=IRIBChannel1_HD", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_IRIB_CHANNEL_1"}}]}

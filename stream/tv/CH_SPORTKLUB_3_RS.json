@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "SPORTKLUB 3 RS | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/SportKlub3RS.m3u8"}]}
+{"streams": [{"name": "Kaynak 1", "title": "SPORTKLUB 3 RS | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/SportKlub3RS.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_SPORTKLUB_3_RS"}}]}

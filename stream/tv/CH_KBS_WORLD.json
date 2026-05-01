@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "KBS WORLD | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=165"}]}
+{"streams": [{"name": "Kaynak 1", "title": "KBS WORLD | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=165", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_KBS_WORLD"}}]}

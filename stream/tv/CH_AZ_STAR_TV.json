@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "AZ STAR TV | Kaynak 1\n(GLWIZ PERSIAN)", "url": "http://live.smartglwiz.workers.dev/?ID=AzStarTV_HD"}]}
+{"streams": [{"name": "Kaynak 1", "title": "AZ STAR TV | Kaynak 1\n(GLWIZ)", "url": "http://live.smartglwiz.workers.dev/?ID=AzStarTV_HD", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_AZ_STAR_TV"}}]}

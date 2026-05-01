@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "4U TV | Kaynak 1\n(GLWIZ PERSIAN)", "url": "http://live.smartglwiz.workers.dev/?ID=4uTV_HD"}]}
+{"streams": [{"name": "Kaynak 1", "title": "4U TV | Kaynak 1\n(GLWIZ)", "url": "http://live.smartglwiz.workers.dev/?ID=4uTV_HD", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_4U_TV"}}]}

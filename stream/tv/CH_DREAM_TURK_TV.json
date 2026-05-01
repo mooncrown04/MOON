@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "DREAM TÜRK TV | Kaynak 1\n(MUZIK)", "url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8"}]}
+{"streams": [{"name": "Kaynak 1", "title": "DREAM TÜRK TV | Kaynak 1\n(MUZIK)", "url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_DREAM_TURK_TV"}}]}

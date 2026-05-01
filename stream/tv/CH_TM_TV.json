@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "TM TV | Kaynak 1\n(GLWIZ PERSIAN)", "url": "http://live.smartglwiz.workers.dev/?ID=TMTV_HD"}]}
+{"streams": [{"name": "Kaynak 1", "title": "TM TV | Kaynak 1\n(GLWIZ)", "url": "http://live.smartglwiz.workers.dev/?ID=TMTV_HD", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_TM_TV"}}]}

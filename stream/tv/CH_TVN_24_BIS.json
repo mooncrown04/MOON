@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "TVN 24 BIS | Kaynak 1\n(POLSKIETV)", "url": "http://live.cdn-polskie.workers.dev/?ID=51"}]}
+{"streams": [{"name": "Kaynak 1", "title": "TVN 24 BIS | Kaynak 1\n(POLSKIETV)", "url": "http://live.cdn-polskie.workers.dev/?ID=51", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_TVN_24_BIS"}}]}

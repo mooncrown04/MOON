@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "ARMENIA1 TV | Kaynak 1\n(GLWIZ PERSIAN)", "url": "http://live.smartglwiz.workers.dev/?ID=Armenia1_HD"}]}
+{"streams": [{"name": "Kaynak 1", "title": "ARMENIA1 TV | Kaynak 1\n(GLWIZ)", "url": "http://live.smartglwiz.workers.dev/?ID=Armenia1_HD", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_ARMENIA1_TV"}}]}

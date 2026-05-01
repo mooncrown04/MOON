@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "ER1 FR | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/ER1FR.m3u8"}]}
+{"streams": [{"name": "Kaynak 1", "title": "ER1 FR | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/ER1FR.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_ER1_FR"}}]}

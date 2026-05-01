@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "AKSU TV | Kaynak 1\n(GLWIZ TURK)", "url": "http://tv.smartglwiz.workers.dev/?ID=AksuTV_HD"}]}
+{"streams": [{"name": "Kaynak 1", "title": "AKSU TV | Kaynak 1\n(GLWIZ)", "url": "http://tv.smartglwiz.workers.dev/?ID=AksuTV_HD", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_AKSU_TV"}}]}

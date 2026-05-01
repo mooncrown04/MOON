@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "COSMOTE SPORT 1 GR | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/CosmoteSport1.m3u8"}]}
+{"streams": [{"name": "Kaynak 1", "title": "COSMOTE SPORT 1 GR | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/CosmoteSport1.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_COSMOTE_SPORT_1_GR"}}]}

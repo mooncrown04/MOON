@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "NAT GEO WILD | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=116"}]}
+{"streams": [{"name": "Kaynak 1", "title": "NAT GEO WILD | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=116", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_NAT_GEO_WILD"}}]}

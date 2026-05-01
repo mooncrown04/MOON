@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "SKY SPORTS MAIN EVENT LIVE UK | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/SkySportsMainEvent.m3u8"}]}
+{"streams": [{"name": "Kaynak 1", "title": "SKY SPORTS MAIN EVENT LIVE UK | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/SkySportsMainEvent.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_SKY_SPORTS_MAIN_EVENT_LIVE_UK"}}]}

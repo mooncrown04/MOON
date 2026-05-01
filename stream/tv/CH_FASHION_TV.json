@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "FASHION TV | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=154"}]}
+{"streams": [{"name": "Kaynak 1", "title": "FASHION TV | Kaynak 1\n(SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=154", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_FASHION_TV"}}]}

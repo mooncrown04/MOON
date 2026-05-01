@@ -1,7 +1,9 @@
 {
-  "id": "MOONCROWN_V3",
-  "version": "3.1.0",
-  "name": "MOONCROWN TV",
+  "id": "MOONCROWN_KATALOG",
+  "version": "1.0.0",
+  "name": "MOONCROWN_TV",
+  "description": "MOONCROWN CANLI YAYINLAR (ILK 100 KANAL)",
+  "logo": "https://st5.depositphotos.com/1041725/67731/v/380/depositphotos_677319750-stock-illustration-ararat-mountain-illustration-vector-white.jpg",
   "resources": [
     "catalog",
     "meta",
@@ -22,17 +24,17 @@
     {
       "id": "CAT_HABERLER",
       "type": "tv",
-      "name": "📂 HABERLER"
+      "name": "📰 Haber"
     },
     {
       "id": "CAT_SPOR",
       "type": "tv",
-      "name": "📂 SPOR"
+      "name": "⚽ Spor Dünyası"
     },
     {
       "id": "CAT_ANIMASYON",
       "type": "tv",
-      "name": "📂 ANIMASYON"
+      "name": "🎨 Animasyon"
     },
     {
       "id": "CAT_ARABESK_RADYOLAR",
@@ -42,7 +44,7 @@
     {
       "id": "CAT_BELGESEL",
       "type": "tv",
-      "name": "📂 BELGESEL"
+      "name": "🦒 Belgesel & Yaşam"
     },
     {
       "id": "CAT_DIGERLERI",
@@ -55,14 +57,9 @@
       "name": "📂 FREESHOT"
     },
     {
-      "id": "CAT_GLWIZ_PERSIAN",
+      "id": "CAT_GLWIZ",
       "type": "tv",
-      "name": "📂 GLWIZ PERSIAN"
-    },
-    {
-      "id": "CAT_GLWIZ_TURK",
-      "type": "tv",
-      "name": "📂 GLWIZ TURK"
+      "name": "📂 GLWIZ"
     },
     {
       "id": "CAT_HARRY_POTTER",
@@ -82,7 +79,7 @@
     {
       "id": "CAT_MUZIK",
       "type": "tv",
-      "name": "📂 MUZIK"
+      "name": "🎵 Müzik"
     },
     {
       "id": "CAT_POLSKIETV",
@@ -97,7 +94,7 @@
     {
       "id": "CAT_SINEMA",
       "type": "tv",
-      "name": "📂 SINEMA"
+      "name": "🎬 Sinema & Dizi"
     },
     {
       "id": "CAT_TOUCHTV_SLOVAKIA",
