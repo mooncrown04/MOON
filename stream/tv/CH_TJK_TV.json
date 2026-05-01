@@ -1,1 +1,1 @@
-{"streams": [{"name": "TJK TV", "title": "TJK TV | SPOR", "url": "https://tjktv-live.tjk.org/tjktv/tjktv.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_TJK_TV"}}]}
+{"streams": [{"name": "Kaynak 1", "title": "TJK TV | Kaynak 1\n(SPOR)", "url": "https://tjktv-live.tjk.org/tjktv/tjktv.m3u8"}, {"name": "Kaynak 2", "title": "TJK TV | Kaynak 2\n(SPOR)", "url": "https://tjktv-live.tjk.org/tjktv_1080p.m3u8"}]}

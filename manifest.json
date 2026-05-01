@@ -1,9 +1,7 @@
 {
-  "id": "MOONCROWN_KATALOG",
-  "version": "1.0.0",
-  "name": "MOONCROWN_TV",
-  "description": "MOONCROWN CANLI YAYINLAR (ILK 100 KANAL)",
-  "logo": "https://st5.depositphotos.com/1041725/67731/v/380/depositphotos_677319750-stock-illustration-ararat-mountain-illustration-vector-white.jpg",
+  "id": "MOONCROWN_V3",
+  "version": "3.1.0",
+  "name": "MOONCROWN TV",
   "resources": [
     "catalog",
     "meta",
@@ -19,107 +17,107 @@
     {
       "id": "CAT_ULUSAL_KANALLAR",
       "type": "tv",
-      "name": "📺 ULUSAL KANALLAR"
+      "name": "📂 ULUSAL KANALLAR"
     },
     {
       "id": "CAT_HABERLER",
       "type": "tv",
-      "name": "📰 Haber"
+      "name": "📂 HABERLER"
     },
     {
       "id": "CAT_SPOR",
       "type": "tv",
-      "name": "⚽ Spor Dünyası"
+      "name": "📂 SPOR"
     },
     {
       "id": "CAT_ANIMASYON",
       "type": "tv",
-      "name": "🎨 Animasyon"
+      "name": "📂 ANIMASYON"
     },
     {
       "id": "CAT_ARABESK_RADYOLAR",
       "type": "tv",
-      "name": "📺 ARABESK RADYOLAR"
+      "name": "📂 ARABESK RADYOLAR"
     },
     {
       "id": "CAT_BELGESEL",
       "type": "tv",
-      "name": "🦒 Belgesel & Yaşam"
+      "name": "📂 BELGESEL"
     },
     {
       "id": "CAT_DIGERLERI",
       "type": "tv",
-      "name": "📺 DIGERLERI"
+      "name": "📂 DIGERLERI"
     },
     {
-      "id": "CAT_FREESHOT_ALBANIA_KOSOVO",
+      "id": "CAT_FREESHOT",
       "type": "tv",
-      "name": "📺 FREESHOT ALBANIA & KOSOVO"
+      "name": "📂 FREESHOT"
     },
     {
-      "id": "CAT_FREESHOT_ARABIA",
+      "id": "CAT_GLWIZ_PERSIAN",
       "type": "tv",
-      "name": "📺 FREESHOT ARABIA"
+      "name": "📂 GLWIZ PERSIAN"
     },
     {
-      "id": "CAT_FREESHOT_ARGENTINA",
+      "id": "CAT_GLWIZ_TURK",
       "type": "tv",
-      "name": "📺 FREESHOT ARGENTINA"
+      "name": "📂 GLWIZ TURK"
     },
     {
-      "id": "CAT_FREESHOT_BELGIUM_NETHERLANDS",
+      "id": "CAT_HARRY_POTTER",
       "type": "tv",
-      "name": "📺 FREESHOT BELGIUM & NETHERLANDS"
+      "name": "📂 HARRY POTTER"
     },
     {
-      "id": "CAT_FREESHOT_BRASIL",
+      "id": "CAT_HIZLI_VE_OFKELI",
       "type": "tv",
-      "name": "📺 FREESHOT BRASIL"
+      "name": "📂 HIZLI VE OFKELI"
     },
     {
-      "id": "CAT_FREESHOT_BULGARIA",
+      "id": "CAT_MCU",
       "type": "tv",
-      "name": "📺 FREESHOT BULGARIA"
+      "name": "📂 MCU"
     },
     {
-      "id": "CAT_FREESHOT_CANADA",
+      "id": "CAT_MUZIK",
       "type": "tv",
-      "name": "📺 FREESHOT CANADA"
+      "name": "📂 MUZIK"
     },
     {
-      "id": "CAT_FREESHOT_CYPRUS_GREECE",
+      "id": "CAT_POLSKIETV",
       "type": "tv",
-      "name": "📺 FREESHOT CYPRUS & GREECE"
+      "name": "📂 POLSKIETV"
     },
     {
-      "id": "CAT_FREESHOT_CZECH_SLOVAK",
+      "id": "CAT_SARKORTV",
       "type": "tv",
-      "name": "📺 FREESHOT CZECH & SLOVAK"
+      "name": "📂 SARKORTV"
     },
     {
-      "id": "CAT_FREESHOT_EX_YU",
+      "id": "CAT_SINEMA",
       "type": "tv",
-      "name": "📺 FREESHOT EX YU"
+      "name": "📂 SINEMA"
     },
     {
-      "id": "CAT_FREESHOT_FRANCE",
+      "id": "CAT_TOUCHTV_SLOVAKIA",
       "type": "tv",
-      "name": "📺 FREESHOT FRANCE"
+      "name": "📂 TOUCHTV SLOVAKIA"
     },
     {
-      "id": "CAT_FREESHOT_GERMANY",
+      "id": "CAT_TURK_HD_LINE",
       "type": "tv",
-      "name": "📺 FREESHOT GERMANY"
+      "name": "📂 TURK HD+ LINE"
     },
     {
-      "id": "CAT_FREESHOT_ITALIA",
+      "id": "CAT_VIZITV",
       "type": "tv",
-      "name": "📺 FREESHOT ITALIA"
+      "name": "📂 VIZITV"
     },
     {
-      "id": "CAT_FREESHOT_POLAND",
+      "id": "CAT_COCUK_AILE",
       "type": "tv",
-      "name": "📺 FREESHOT POLAND"
+      "name": "📂 ÇOCUK & AILE"
     }
   ]
 }

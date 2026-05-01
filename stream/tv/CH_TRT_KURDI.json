@@ -1,1 +1,1 @@
-{"streams": [{"name": "TRT KURDİ", "title": "TRT KURDİ | ULUSAL KANALLAR", "url": "https://tv-trtkurdi.medya.trt.com.tr/master_720.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_TRT_KURDI"}}]}
+{"streams": [{"name": "Kaynak 1", "title": "TRT KURDİ | Kaynak 1\n(ULUSAL KANALLAR)", "url": "https://tv-trtkurdi.medya.trt.com.tr/master_720.m3u8"}, {"name": "Kaynak 2", "title": "TRT KURDI | Kaynak 2\n(TURK HD+ LINE)", "url": "https://tv-trtkurdi.medya.trt.com.tr/master.m3u8"}]}

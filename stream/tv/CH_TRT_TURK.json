@@ -1,1 +1,1 @@
-{"streams": [{"name": "TRT TURK", "title": "TRT TURK | ULUSAL KANALLAR", "url": "https://tv-trtturk.medya.trt.com.tr/master_720.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_TRT_TURK"}}]}
+{"streams": [{"name": "Kaynak 1", "title": "TRT TURK | Kaynak 1\n(ULUSAL KANALLAR)", "url": "https://tv-trtturk.medya.trt.com.tr/master_720.m3u8"}, {"name": "Kaynak 2", "title": "TRT TURK | Kaynak 2\n(GLWIZ TURK)", "url": "http://tv.smartglwiz.workers.dev/?ID=TRTTurk_HD"}]}
