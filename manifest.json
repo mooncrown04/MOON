@@ -92,6 +92,11 @@
       "name": "📂 SARKORTV"
     },
     {
+      "id": "CAT_SECILI",
+      "type": "tv",
+      "name": "⭐ SEÇİLİ KANALLAR"
+    },
+    {
       "id": "CAT_SINEMA",
       "type": "tv",
       "name": "🎬 Sinema & Dizi"
