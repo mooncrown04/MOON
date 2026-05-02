@@ -72,6 +72,9 @@ def process_stremio_addon():
         if line.startswith("#EXTINF:"):
             group_match = re.search(r'group-title="([^"]+)"', line)
             logo_match = re.search(r'tvg-logo="([^"]+)"', line)
+            # Yeni eklenen: group-author bilgisini yakalar
+            author_match = re.search(r'group-author="([^"]+)"', line)
+            
             name_parts = line.split(",")
             name = name_parts[-1].strip().replace("-", " ").upper() if len(name_parts) > 1 else "BILINMEYEN KANAL"
             
@@ -96,7 +99,8 @@ def process_stremio_addon():
             current_info = {
                 "group": assigned_group,
                 "logo": logo_match.group(1) if logo_match else "https://via.placeholder.com/300",
-                "name": name
+                "name": name,
+                "author": author_match.group(1) if author_match else "Bilinmeyen Kaynak"
             }
         
         elif line.startswith("http") and current_info:
@@ -132,8 +136,8 @@ def process_stremio_addon():
             # Streamleri birleştir (Aynı kanalda birden fazla link varsa)
             s_idx = len(channels[chan_id]["streams"]) + 1
             channels[chan_id]["streams"].append({
-                "name": f"Kaynak {s_idx}",
-                "title": f"{current_info['name']} | Kaynak {s_idx}\n({current_info['group']})",
+                "name": f"{current_info['name']}",
+                "title": f"{current_info['author']} | Kaynak {s_idx} | ({current_info['group']})",
                 "url": line,
                 "behaviorHints": {"notClickable": False, "bingeGroup": chan_id}
             })
