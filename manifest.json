@@ -22,39 +22,14 @@
       "name": "📂 ULUSAL KANALLAR"
     },
     {
-      "id": "CAT_HABERLER",
+      "id": "CAT_SPOR_KANALLARI",
       "type": "tv",
-      "name": "📰 Haber"
+      "name": "📂 SPOR KANALLARI"
     },
     {
-      "id": "CAT_SPOR",
+      "id": "CAT_HABER",
       "type": "tv",
-      "name": "⚽ Spor Dünyası"
-    },
-    {
-      "id": "CAT_ANIMASYON",
-      "type": "tv",
-      "name": "🎨 Animasyon"
-    },
-    {
-      "id": "CAT_ARABESK_RADYOLAR",
-      "type": "tv",
-      "name": "📂 ARABESK RADYOLAR"
-    },
-    {
-      "id": "CAT_BELGESEL",
-      "type": "tv",
-      "name": "🦒 Belgesel & Yaşam"
-    },
-    {
-      "id": "CAT_DIGERLERI",
-      "type": "tv",
-      "name": "📂 DIGERLERI"
-    },
-    {
-      "id": "CAT_FREESHOT",
-      "type": "tv",
-      "name": "📂 FREESHOT"
+      "name": "📂 HABER"
     },
     {
       "id": "CAT_GLWIZ",
@@ -62,9 +37,9 @@
       "name": "📂 GLWIZ"
     },
     {
-      "id": "CAT_HARRY_POTTER",
+      "id": "CAT_MCU",
       "type": "tv",
-      "name": "📂 HARRY POTTER"
+      "name": "📂 MCU"
     },
     {
       "id": "CAT_HIZLI_VE_OFKELI",
@@ -72,24 +47,9 @@
       "name": "📂 HIZLI VE OFKELI"
     },
     {
-      "id": "CAT_MCU",
+      "id": "CAT_HARRY_POTTER",
       "type": "tv",
-      "name": "📂 MCU"
-    },
-    {
-      "id": "CAT_MUZIK",
-      "type": "tv",
-      "name": "🎵 Müzik"
-    },
-    {
-      "id": "CAT_POLSKIETV",
-      "type": "tv",
-      "name": "📂 POLSKIETV"
-    },
-    {
-      "id": "CAT_SARKORTV",
-      "type": "tv",
-      "name": "📂 SARKORTV"
+      "name": "📂 HARRY POTTER"
     },
     {
       "id": "CAT_SECILI",
@@ -97,14 +57,19 @@
       "name": "⭐ SEÇİLİ KANALLAR"
     },
     {
-      "id": "CAT_SINEMA",
+      "id": "CAT_ANIMASYON",
       "type": "tv",
-      "name": "🎬 Sinema & Dizi"
+      "name": "🎨 Animasyon"
     },
     {
-      "id": "CAT_TOUCHTV_SLOVAKIA",
+      "id": "CAT_SARKORTV",
       "type": "tv",
-      "name": "📂 TOUCHTV SLOVAKIA"
+      "name": "📂 SARKORTV"
+    },
+    {
+      "id": "CAT_POLSKIETV",
+      "type": "tv",
+      "name": "📂 POLSKIETV"
     },
     {
       "id": "CAT_TURK_HD_LINE",
@@ -112,14 +77,44 @@
       "name": "📂 TURK HD+ LINE"
     },
     {
+      "id": "CAT_ARABESK_RADYOLAR",
+      "type": "tv",
+      "name": "📂 ARABESK RADYOLAR"
+    },
+    {
+      "id": "CAT_FREESHOT",
+      "type": "tv",
+      "name": "📂 FREESHOT"
+    },
+    {
+      "id": "CAT_MUZIK",
+      "type": "tv",
+      "name": "🎵 Müzik"
+    },
+    {
+      "id": "CAT_SINEMA",
+      "type": "tv",
+      "name": "🎬 Sinema & Dizi"
+    },
+    {
       "id": "CAT_VIZITV",
       "type": "tv",
       "name": "📂 VIZITV"
     },
     {
-      "id": "CAT_COCUK_AILE",
+      "id": "CAT_SINEMA_DIZI",
       "type": "tv",
-      "name": "📂 ÇOCUK & AILE"
+      "name": "📂 SİNEMA & DİZİ"
+    },
+    {
+      "id": "CAT_TABIITV",
+      "type": "tv",
+      "name": "📂 TABIITV"
+    },
+    {
+      "id": "CAT_COCUK",
+      "type": "tv",
+      "name": "🧸 Çocuk"
     }
   ]
 }
