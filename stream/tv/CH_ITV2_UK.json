@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "ITV2 UK | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/ITV2.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_ITV2_UK"}}]}
+{"streams": [{"name": "ITV2 UK", "title": "smartgmr | Kaynak 1 | (FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/ITV2.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_ITV2_UK"}}]}

@@ -22,9 +22,9 @@
       "name": "📂 ULUSAL KANALLAR"
     },
     {
-      "id": "CAT_SPOR_KANALLARI",
+      "id": "CAT_SPOR",
       "type": "tv",
-      "name": "📂 SPOR KANALLARI"
+      "name": "⚽ Spor Dünyası"
     },
     {
       "id": "CAT_HABER",
@@ -67,14 +67,14 @@
       "name": "📂 SARKORTV"
     },
     {
-      "id": "CAT_POLSKIETV",
+      "id": "CAT_BELGESEL",
       "type": "tv",
-      "name": "📂 POLSKIETV"
+      "name": "🦒 Belgesel & Yaşam"
     },
     {
-      "id": "CAT_TURK_HD_LINE",
+      "id": "CAT_FREESHOT",
       "type": "tv",
-      "name": "📂 TURK HD+ LINE"
+      "name": "📂 FREESHOT"
     },
     {
       "id": "CAT_ARABESK_RADYOLAR",
@@ -82,9 +82,9 @@
       "name": "📂 ARABESK RADYOLAR"
     },
     {
-      "id": "CAT_FREESHOT",
+      "id": "CAT_POLSKIETV",
       "type": "tv",
-      "name": "📂 FREESHOT"
+      "name": "📂 POLSKIETV"
     },
     {
       "id": "CAT_MUZIK",
@@ -102,6 +102,11 @@
       "name": "📂 VIZITV"
     },
     {
+      "id": "CAT_TURK_HD_LINE",
+      "type": "tv",
+      "name": "📂 TURK HD+ LINE"
+    },
+    {
       "id": "CAT_SINEMA_DIZI",
       "type": "tv",
       "name": "📂 SİNEMA & DİZİ"
@@ -110,6 +115,11 @@
       "id": "CAT_TABIITV",
       "type": "tv",
       "name": "📂 TABIITV"
+    },
+    {
+      "id": "CAT_TOUCHTV_SLOVAKIA",
+      "type": "tv",
+      "name": "📂 TOUCHTV SLOVAKIA"
     },
     {
       "id": "CAT_COCUK",

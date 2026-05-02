@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "NTV | Kaynak 1\n(HABER)", "url": "https://dogus.daioncdn.net/ntv/ntv_720p.m3u8?ce=3", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_NTV"}}]}
+{"streams": [{"name": "NTV", "title": "Mertcantv | Kaynak 1 | (HABER)", "url": "https://dogus.daioncdn.net/ntv/ntv_720p.m3u8?ce=3", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_NTV"}}]}

@@ -1,1 +1,1 @@
-{"streams": [{"name": "Kaynak 1", "title": "TSN5 | Kaynak 1\n(FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/TSN5.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_TSN5"}}]}
+{"streams": [{"name": "TSN5", "title": "smartgmr | Kaynak 1 | (FREESHOT)", "url": "http://cdn.tv-rds.workers.dev/TSN5.m3u8", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_TSN5"}}]}
