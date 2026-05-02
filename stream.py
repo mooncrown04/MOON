@@ -9,7 +9,7 @@ import requests
 OZEL_KATEGORILER = ["FREESHOT","GLWIZ"]
 
 # 2. Bu kelimeler KANAL İSMİNDE geçerse "SEÇİLİ" kategorisinde toplanır:
-SECILI_KANAL_FILTRESI = ["123", "124", "125"]
+SECILI_KANAL_FILTRESI = ["194", "198", "202","204", "206", "208", "210", "212","214"]
 
 def slugify(text):
     """ID ve Dosya adları için metni temizler, büyük harf yapar ve tireleri boşlukla değiştirir."""
