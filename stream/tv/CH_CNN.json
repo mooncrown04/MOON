@@ -1,1 +1,1 @@
-{"streams": [{"name": "CNN", "title": "smartgmr | Kaynak 1 | (POLSKIETV)", "url": "http://live.cdn-polskie.workers.dev/?ID=79", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_CNN"}}, {"name": "CNN", "title": "smartgmr | Kaynak 2 | (SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=90", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_CNN"}}]}
+{"streams": [{"name": "CNN", "title": "smartgmr | Kaynak 1 | (SARKORTV)", "url": "http://live.sarkortv.workers.dev/?ID=90", "behaviorHints": {"notClickable": false, "bingeGroup": "CH_CNN"}}]}
