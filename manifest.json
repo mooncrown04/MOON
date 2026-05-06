@@ -77,14 +77,14 @@
       "name": "📂 FREESHOT"
     },
     {
-      "id": "CAT_ARABESK_RADYOLAR",
-      "type": "tv",
-      "name": "📂 ARABESK RADYOLAR"
-    },
-    {
       "id": "CAT_POLSKIETV",
       "type": "tv",
       "name": "📂 POLSKIETV"
+    },
+    {
+      "id": "CAT_ARABESK_RADYOLAR",
+      "type": "tv",
+      "name": "📂 ARABESK RADYOLAR"
     },
     {
       "id": "CAT_MUZIK",
@@ -95,6 +95,11 @@
       "id": "CAT_SINEMA",
       "type": "tv",
       "name": "🎬 Sinema & Dizi"
+    },
+    {
+      "id": "CAT_VIZITV",
+      "type": "tv",
+      "name": "📂 VIZITV"
     },
     {
       "id": "CAT_TURK_HD_LINE",
