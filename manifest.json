@@ -37,34 +37,14 @@
       "name": "📂 GLWIZ"
     },
     {
-      "id": "CAT_MCU",
+      "id": "CAT_POLSKIETV",
       "type": "tv",
-      "name": "📂 MCU"
-    },
-    {
-      "id": "CAT_HIZLI_VE_OFKELI",
-      "type": "tv",
-      "name": "📂 HIZLI VE OFKELI"
-    },
-    {
-      "id": "CAT_SINEMA_DIZI",
-      "type": "tv",
-      "name": "📂 SİNEMA & DİZİ"
+      "name": "📂 POLSKIETV"
     },
     {
       "id": "CAT_DIGER",
       "type": "tv",
       "name": "📡 Diğer Kanallar"
-    },
-    {
-      "id": "CAT_SECILI",
-      "type": "tv",
-      "name": "⭐ SEÇİLİ KANALLAR"
-    },
-    {
-      "id": "CAT_ANIMASYON",
-      "type": "tv",
-      "name": "🎨 Animasyon"
     },
     {
       "id": "CAT_SARKORTV",
@@ -107,11 +87,6 @@
       "name": "📂 MÜZIK - DIĞER"
     },
     {
-      "id": "CAT_POLSKIETV",
-      "type": "tv",
-      "name": "📂 POLSKIETV"
-    },
-    {
       "id": "CAT_KIBRIS",
       "type": "tv",
       "name": "📂 KIBRIS"
@@ -125,6 +100,11 @@
       "id": "CAT_BELGESEL",
       "type": "tv",
       "name": "🦒 Belgesel & Yaşam"
+    },
+    {
+      "id": "CAT_VIZITV",
+      "type": "tv",
+      "name": "📂 VIZITV"
     },
     {
       "id": "CAT_TURK_HD_LINE",
@@ -147,11 +127,6 @@
       "name": "🎬 Sinema & Dizi"
     },
     {
-      "id": "CAT_VIZITV",
-      "type": "tv",
-      "name": "📂 VIZITV"
-    },
-    {
       "id": "CAT_724_DIZI",
       "type": "tv",
       "name": "📂 7/24 DIZI"
@@ -165,6 +140,11 @@
       "id": "CAT_TOUCHTV_SLOVAKIA",
       "type": "tv",
       "name": "📂 TOUCHTV SLOVAKIA"
+    },
+    {
+      "id": "CAT_SECILI",
+      "type": "tv",
+      "name": "⭐ SEÇİLİ KANALLAR"
     }
   ]
 }
