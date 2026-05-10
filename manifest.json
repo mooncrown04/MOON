@@ -37,11 +37,6 @@
       "name": "📂 GLWIZ"
     },
     {
-      "id": "CAT_POLSKIETV",
-      "type": "tv",
-      "name": "📂 POLSKIETV"
-    },
-    {
       "id": "CAT_DIGER",
       "type": "tv",
       "name": "📡 Diğer Kanallar"
@@ -85,6 +80,11 @@
       "id": "CAT_MUZIK_DIGER",
       "type": "tv",
       "name": "📂 MÜZIK - DIĞER"
+    },
+    {
+      "id": "CAT_POLSKIETV",
+      "type": "tv",
+      "name": "📂 POLSKIETV"
     },
     {
       "id": "CAT_KIBRIS",
