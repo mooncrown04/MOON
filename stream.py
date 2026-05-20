@@ -10,7 +10,7 @@ import requests
 # İstediğiniz kategoriyi yazın ve içine gelmesini istediğiniz kanalların adlarını EKLEYİN.
 # NOT: Büyük/küçük harfe duyarlıdır, M3U'daki kanal adıyla tam veya kısmi eşleşmesi yeterlidir.
 MANUEL_OZEL_KATEGORILER = {
-    "⭐ ULUSAL": ["TRT 1", "ATV", "KANAL D","SHOW TV", "NOW TV", "STAR TV","KANAL 7","TV 8", "TV 8.5", "BEYAZ TV", "TEVE 2", "A2"],
+    "⭐ ULUSAL KANALLAR": ["TRT 1", "ATV", "KANAL D","SHOW TV", "NOW TV", "STAR TV","KANAL 7","TV 8", "TV 8.5", "BEYAZ TV", "TEVE 2", "A2"],
   # İsterseniz buraya yeni kategoriler de ekleyebilirsiniz:
    "⚽ SPOR": ["BEIN SPORTS 1", "HT SPOR","TIVIBU SPOR", "A SPOR","TRT SPOR YILDIZ", "FUTBOL TV"],
   "BELGESEL": ["NATGEO CHANNEL","NAT GEO WILD", "TLC","DMAX", "TRT BELGESEL","YABAN TV", "ÇIFTÇI TV"],
