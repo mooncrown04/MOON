@@ -17,9 +17,9 @@
   ],
   "catalogs": [
     {
-      "id": "CAT_ULUSAL",
+      "id": "CAT_ULUSAL_KANALLAR",
       "type": "tv",
-      "name": "⭐ ULUSAL"
+      "name": "⭐ ULUSAL KANALLAR"
     },
     {
       "id": "CAT_SPOR",
