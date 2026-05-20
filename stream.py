@@ -75,6 +75,7 @@ def process_stremio_addon():
         "ANIMASYON": "🎨 Animasyon",
         "COCUK": "🧸 Çocuk",
         "YETISKIN": "🔞 Yetişkin",
+        "Touchtv Slovakia": "📡 YABANCI ","Freeshot Canada": "📡 YABANCI","FREESHOT": "📡 YABANCI",
         "DIGER": "📡 Diğer Kanallar"
     }
 
