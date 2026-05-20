@@ -22,6 +22,11 @@
       "name": "⭐ ULUSAL KANALLAR"
     },
     {
+      "id": "CAT_SINEMA_DIZI",
+      "type": "tv",
+      "name": "🎬 SİNEMA & DİZİ"
+    },
+    {
       "id": "CAT_SPOR",
       "type": "tv",
       "name": "⚽ SPOR"
@@ -112,19 +117,9 @@
       "name": "📂 KURUMLAR"
     },
     {
-      "id": "CAT_SINEMA",
-      "type": "tv",
-      "name": "🎬 Sinema & Dizi"
-    },
-    {
       "id": "CAT_724_DIZI",
       "type": "tv",
       "name": "📂 7/24 DIZI"
-    },
-    {
-      "id": "CAT_TABIITV",
-      "type": "tv",
-      "name": "📂 TABIITV"
     },
     {
       "id": "CAT_TOUCHTV_SLOVAKIA",
