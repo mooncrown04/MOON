@@ -5,12 +5,25 @@ import shutil
 import requests
 
 # --- AYARLAR ---
-# 1. Bu kelimeler M3U KATEGORİ (group-title) adında geçerse kendi adıyla kategori olur:
-OZEL_KATEGORILER = ["FREESHOT","GLWIZ"]
 
-# 2. Bu kelimeler KANAL İSMİNDE geçerse "SEÇİLİ" kategorisinde toplanır:
-SECILI_KANAL_FILTRESI = ["194", "198", "202","204", "206", "208", "210", "212","214","216","ARABESK FM","BOR FM","DAMAR FM","KARESİ RADYO","EJDERHANI NASIL EGITIRSIN 3",
-                          "TJK TV"]
+# 1. 🆕 KENDİ ÖZEL KATEGORİLERİNİZ VE KANALLARINIZ
+# İstediğiniz kategoriyi yazın ve içine gelmesini istediğiniz kanalların adlarını EKLEYİN.
+# NOT: Büyük/küçük harfe duyarlıdır, M3U'daki kanal adıyla tam veya kısmi eşleşmesi yeterlidir.
+MANUEL_OZEL_KATEGORILER = {
+    "⭐ ULUSAL": ["TRT 1", "ATV", "KANAL D","SHOW TV", "NOW TV", "STAR TV","KANAL 7","TV 8", "TV 8.5", "BEYAZ TV", "TEVE 2", "A2"],
+  # İsterseniz buraya yeni kategoriler de ekleyebilirsiniz:
+   "⚽ SPOR": ["BEIN SPORTS 1", "HT SPOR","TIVIBU SPOR", "A SPOR","TRT SPOR YILDIZ", "FUTBOL TV"],
+  "BELGESEL": ["NATGEO CHANNEL","NAT GEO WILD", "TLC","DMAX", "TRT BELGESEL","YABAN TV", "ÇIFTÇI TV"],
+    " HABER": ["HALK TV", "TV 100", "SÖZCÜ TV","NTV", "HABERTÜRK", "HABER GLOBAL","TRT HABER","24 TV", "FLASH HABER TV", "NEO HABER", "TGRT HABER", "ULUSAL KANAL"]
+}
+
+# 2. Bu kelimeler M3U KATEGORİ (group-title) adında geçerse kendi adıyla kategori olur:
+OZEL_KATEGORILER = ["FREESHOT", "GLWIZ"]
+
+# 3. Bu kelimeler KANAL İSMİNDE geçerse "SEÇILI" kategorisinde toplanır:
+# (Hatalı olan tırnak işaretleri düzeltildi)
+SECILI_KANAL_FILTRESI = ["194", "198", "202", "204", "206", "208", "210", "212", "214", "216", "KARESİ RADYO"]
+
 
 def slugify(text):
     """ID ve Dosya adları için metni temizler, büyük harf yapar ve tireleri boşlukla değiştirir."""
@@ -40,7 +53,7 @@ def process_stremio_addon():
     for folder_path in ["stream", "meta", "catalog"]:
         if os.path.exists(folder_path):
             shutil.rmtree(folder_path)
-    
+        
     for folder in folders:
         os.makedirs(folder, exist_ok=True)
 
@@ -64,6 +77,11 @@ def process_stremio_addon():
         "DIGER": "📡 Diğer Kanallar"
     }
 
+    # Kullanıcının kendi belirlediği kategorileri ana listeye kaydetmek için hazırlık
+    manuel_slugs = {}
+    for custom_cat_name in MANUEL_OZEL_KATEGORILER.keys():
+        manuel_slugs[slugify(custom_cat_name)] = custom_cat_name
+
     lines = m3u_content.splitlines()
     current_info = None
 
@@ -73,7 +91,6 @@ def process_stremio_addon():
         if line.startswith("#EXTINF:"):
             group_match = re.search(r'group-title="([^"]+)"', line)
             logo_match = re.search(r'tvg-logo="([^"]+)"', line)
-            # Yeni eklenen: group-author bilgisini yakalar
             author_match = re.search(r'group-author="([^"]+)"', line)
             
             name_parts = line.split(",")
@@ -81,21 +98,34 @@ def process_stremio_addon():
             
             raw_group = group_match.group(1).upper() if group_match else "DIGER"
             assigned_group = raw_group
-            found_by_cat = False
-
-            # ÖNCE: Kategori araması (Kendi adıyla kategori olur)
-            for cat_word in OZEL_KATEGORILER:
-                if cat_word in raw_group:
-                    assigned_group = cat_word
-                    found_by_cat = True
-                    break
             
-            # SONRA: Eğer kategori bulunamadıysa kanal ismi araması (SEÇİLİ olur)
-            if not found_by_cat:
-                for name_word in SECILI_KANAL_FILTRESI:
-                    if name_word in name:
-                        assigned_group = "SECILI"
+            # --- YENİ FİLTRELEME ADIMI (EN ÖNCELİKLİ) ---
+            found_custom = False
+            for custom_cat, keywords in MANUEL_OZEL_KATEGORILER.items():
+                for kw in keywords:
+                    if kw.upper() in name: # Kanal adında senin belirlediğin kelime geçiyor mu?
+                        assigned_group = custom_cat
+                        found_custom = True
                         break
+                if found_custom:
+                    break
+
+            # Eğer senin listende yoksa, eski otomatik sisteme devam et
+            if not found_custom:
+                found_by_cat = False
+                # ÖNCE: Kategori araması
+                for cat_word in OZEL_KATEGORILER:
+                    if cat_word in raw_group:
+                        assigned_group = cat_word
+                        found_by_cat = True
+                        break
+                
+                # SONRA: Kanal ismi araması (SEÇİLİ olur)
+                if not found_by_cat:
+                    for name_word in SECILI_KANAL_FILTRESI:
+                        if name_word in name:
+                            assigned_group = "SECILI"
+                            break
 
             current_info = {
                 "group": assigned_group,
@@ -118,10 +148,14 @@ def process_stremio_addon():
                 channel_count += 1 
 
                 if cat_id not in categories:
+                    # Kategori ismini ekrana basma kuralları
+                    raw_slug = slugify(current_info['group'])
+                    
                     if current_info['group'] == "SECILI":
                         display_name = "⭐ SEÇİLİ KANALLAR"
+                    elif raw_slug in manuel_slugs: # Eğer senin elinle eklediğin kategoriyse
+                        display_name = manuel_slugs[raw_slug]
                     else:
-                        raw_slug = slugify(current_info['group'])
                         display_name = category_map.get(raw_slug, f"📂 {current_info['group']}")
                     
                     categories[cat_id] = {"display_name": display_name, "metas": []}
@@ -134,7 +168,7 @@ def process_stremio_addon():
                     "description": f"{current_info['group']} KATEGORISINDE YAYIN."
                 })
 
-            # Streamleri birleştir (Aynı kanalda birden fazla link varsa)
+            # Streamleri birleştir
             s_idx = len(channels[chan_id]["streams"]) + 1
             channels[chan_id]["streams"].append({
                 "name": f"{current_info['name']}",
@@ -177,7 +211,7 @@ def process_stremio_addon():
     with open("manifest.json", 'w', encoding='utf-8') as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-    print(f"İşlem Tamamlandı! {channel_count} kanal güncellendi. Tireler boşluğa çevrildi.")
+    print(f"İşlem Tamamlandı! {channel_count} kanal güncellendi. Özel kategoriler eklendi.")
 
 if __name__ == "__main__":
     process_stremio_addon()
