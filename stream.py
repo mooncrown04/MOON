@@ -15,11 +15,11 @@ MANUEL_OZEL_KATEGORILER = {
    "⚽ SPOR": ["BEIN SPORTS 1", "HT SPOR","TIVIBU SPOR", "A SPOR","TRT SPOR YILDIZ", "FUTBOL TV"],
   "BELGESEL": ["NATGEO CHANNEL","NAT GEO WILD", "TLC","DMAX", "TRT BELGESEL","YABAN TV", "ÇIFTÇI TV"],
     " HABER": ["HALK TV", "TV 100", "SÖZCÜ TV","NTV", "HABERTÜRK", "HABER GLOBAL","TRT HABER","24 TV", "FLASH HABER TV", "NEO HABER", "TGRT HABER", "ULUSAL KANAL"],
-    "🎬 SİNEMA & DİZİ": ["FILM SCREEN","TABII TV", "TIVI6","EKOL TV", "TEVE 2","A2", "DIZI-FILM TV"],
+    "🎬 SİNEMA & DİZİ": ["FILM SCREEN","TABII TV", "TIVI6","EKOL TV", "TEVE 2","A2", "DIZI-FILM TV", "SIYAH BEYAZ AŞK","TATLI İNTIKAM","ZALIM İSTANBUL"],
 }
 
 # 2. Bu kelimeler M3U KATEGORİ (group-title) adında geçerse kendi adıyla kategori olur:
-OZEL_KATEGORILER = ["FREESHOT", "GLWIZ"]
+OZEL_KATEGORILER = ["FREESHOT", "GLWIZ","TOUCHTV"]
 
 # 3. Bu kelimeler KANAL İSMİNDE geçerse "SEÇILI" kategorisinde toplanır:
 # (Hatalı olan tırnak işaretleri düzeltildi)
@@ -75,7 +75,7 @@ def process_stremio_addon():
         "ANIMASYON": "🎨 Animasyon",
         "COCUK": "🧸 Çocuk",
         "YETISKIN": "🔞 Yetişkin",
-        "Touchtv Slovakia": "📡 YABANCI ","TOUCHTV SLOVAKIA": "📡 YABANCI","FREESHOT": "📡 YABANCI","Sarkortv": "📡 YABANCI ",
+        "Touchtv Slovakia": "📡 YABANCI ","TOUCHTV": "📡 YABANCI","FREESHOT": "📡 YABANCI","Sarkortv": "📡 YABANCI ",
         "DIGER": "📡 Diğer Kanallar"
     }
 
