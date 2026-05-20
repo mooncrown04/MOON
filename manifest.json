@@ -27,14 +27,24 @@
       "name": "⚽ Spor Dünyası"
     },
     {
+      "id": "CAT_SECILI",
+      "type": "tv",
+      "name": "⭐ SEÇİLİ KANALLAR"
+    },
+    {
       "id": "CAT_HABER",
       "type": "tv",
       "name": "📂 HABER"
     },
     {
-      "id": "CAT_GLWIZ",
+      "id": "CAT_BELGESEL",
       "type": "tv",
-      "name": "📂 GLWIZ"
+      "name": "🦒 Belgesel & Yaşam"
+    },
+    {
+      "id": "CAT_MUZIK",
+      "type": "tv",
+      "name": "🎵 Müzik"
     },
     {
       "id": "CAT_DIGER",
@@ -47,9 +57,9 @@
       "name": "📂 SARKORTV"
     },
     {
-      "id": "CAT_MUZIK",
+      "id": "CAT_ULUSAL_KANALAR",
       "type": "tv",
-      "name": "🎵 Müzik"
+      "name": "📂 ULUSAL KANALAR"
     },
     {
       "id": "CAT_EKONOMI",
@@ -62,9 +72,9 @@
       "name": "📂 DINI"
     },
     {
-      "id": "CAT_FREESHOT",
+      "id": "CAT_KIBRIS",
       "type": "tv",
-      "name": "📂 FREESHOT"
+      "name": "📂 KIBRIS"
     },
     {
       "id": "CAT_YEREL",
@@ -72,39 +82,19 @@
       "name": "📂 YEREL"
     },
     {
-      "id": "CAT_ARABESK_RADYOLAR",
-      "type": "tv",
-      "name": "📂 ARABESK RADYOLAR"
-    },
-    {
       "id": "CAT_MUZIK_DIGER",
       "type": "tv",
       "name": "📂 MÜZIK - DIĞER"
     },
     {
-      "id": "CAT_POLSKIETV",
+      "id": "CAT_FREESHOT",
       "type": "tv",
-      "name": "📂 POLSKIETV"
-    },
-    {
-      "id": "CAT_KIBRIS",
-      "type": "tv",
-      "name": "📂 KIBRIS"
+      "name": "📂 FREESHOT"
     },
     {
       "id": "CAT_COCUK",
       "type": "tv",
       "name": "🧸 Çocuk"
-    },
-    {
-      "id": "CAT_BELGESEL",
-      "type": "tv",
-      "name": "🦒 Belgesel & Yaşam"
-    },
-    {
-      "id": "CAT_VIZITV",
-      "type": "tv",
-      "name": "📂 VIZITV"
     },
     {
       "id": "CAT_TURK_HD_LINE",
@@ -142,9 +132,9 @@
       "name": "📂 TOUCHTV SLOVAKIA"
     },
     {
-      "id": "CAT_SECILI",
+      "id": "CAT_GLWIZ",
       "type": "tv",
-      "name": "⭐ SEÇİLİ KANALLAR"
+      "name": "📂 GLWIZ"
     }
   ]
 }
