@@ -17,29 +17,24 @@
   ],
   "catalogs": [
     {
-      "id": "CAT_ULUSAL_KANALLAR",
+      "id": "CAT_ULUSAL",
       "type": "tv",
-      "name": "📂 ULUSAL KANALLAR"
+      "name": "⭐ ULUSAL"
     },
     {
       "id": "CAT_SPOR",
       "type": "tv",
-      "name": "⚽ Spor Dünyası"
-    },
-    {
-      "id": "CAT_SECILI",
-      "type": "tv",
-      "name": "⭐ SEÇİLİ KANALLAR"
+      "name": "⚽ SPOR"
     },
     {
       "id": "CAT_HABER",
       "type": "tv",
-      "name": "📂 HABER"
+      "name": " HABER"
     },
     {
       "id": "CAT_BELGESEL",
       "type": "tv",
-      "name": "🦒 Belgesel & Yaşam"
+      "name": "BELGESEL"
     },
     {
       "id": "CAT_MUZIK",
@@ -80,6 +75,11 @@
       "id": "CAT_YEREL",
       "type": "tv",
       "name": "📂 YEREL"
+    },
+    {
+      "id": "CAT_ARABESK_RADYOLAR",
+      "type": "tv",
+      "name": "📂 ARABESK RADYOLAR"
     },
     {
       "id": "CAT_MUZIK_DIGER",
@@ -135,6 +135,11 @@
       "id": "CAT_GLWIZ",
       "type": "tv",
       "name": "📂 GLWIZ"
+    },
+    {
+      "id": "CAT_SECILI",
+      "type": "tv",
+      "name": "⭐ SEÇİLİ KANALLAR"
     }
   ]
 }
