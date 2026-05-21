@@ -57,11 +57,6 @@
       "name": "📂 SARKORTV"
     },
     {
-      "id": "CAT_ULUSAL_KANALAR",
-      "type": "tv",
-      "name": "📂 ULUSAL KANALAR"
-    },
-    {
       "id": "CAT_EKONOMI",
       "type": "tv",
       "name": "📂 EKONOMI"
@@ -87,11 +82,6 @@
       "name": "📂 ARABESK RADYOLAR"
     },
     {
-      "id": "CAT_MUZIK_DIGER",
-      "type": "tv",
-      "name": "📂 MÜZIK - DIĞER"
-    },
-    {
       "id": "CAT_FREESHOT",
       "type": "tv",
       "name": "📡 YABANCI"
@@ -115,6 +105,11 @@
       "id": "CAT_KURUMLAR",
       "type": "tv",
       "name": "📂 KURUMLAR"
+    },
+    {
+      "id": "CAT_MUZIK_DIGER",
+      "type": "tv",
+      "name": "📂 MÜZIK - DIĞER"
     },
     {
       "id": "CAT_TOUCHTV",
