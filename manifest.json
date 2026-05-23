@@ -67,6 +67,11 @@
       "name": "📂 DINI"
     },
     {
+      "id": "CAT_FREESHOT",
+      "type": "tv",
+      "name": "📡 YABANCI"
+    },
+    {
       "id": "CAT_KIBRIS",
       "type": "tv",
       "name": "📂 KIBRIS"
@@ -87,9 +92,9 @@
       "name": "📂 MÜZIK - DIĞER"
     },
     {
-      "id": "CAT_FREESHOT",
+      "id": "CAT_SPOR_KANALLARI",
       "type": "tv",
-      "name": "📡 YABANCI"
+      "name": "📂 SPOR KANALLARI"
     },
     {
       "id": "CAT_COCUK",
