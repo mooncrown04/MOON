@@ -102,11 +102,6 @@
       "name": "🧸 Çocuk"
     },
     {
-      "id": "CAT_TURK_HD_LINE",
-      "type": "tv",
-      "name": "📂 TURK HD+ LINE"
-    },
-    {
       "id": "CAT_EGLENCE",
       "type": "tv",
       "name": "📂 EĞLENCE"
@@ -120,6 +115,11 @@
       "id": "CAT_TOUCHTV",
       "type": "tv",
       "name": "📡 YABANCI"
+    },
+    {
+      "id": "CAT_TURK_HD_LINE",
+      "type": "tv",
+      "name": "📂 TURK HD+ LINE"
     },
     {
       "id": "CAT_GLWIZ",
