@@ -22,11 +22,6 @@
       "name": "⭐ ULUSAL KANALLAR"
     },
     {
-      "id": "CAT_SINEMA_DIZI",
-      "type": "tv",
-      "name": "🎬 SİNEMA & DİZİ"
-    },
-    {
       "id": "CAT_SPOR",
       "type": "tv",
       "name": "⚽ SPOR"
@@ -45,6 +40,11 @@
       "id": "CAT_MUZIK",
       "type": "tv",
       "name": "🎵 Müzik"
+    },
+    {
+      "id": "CAT_SINEMA_DIZI",
+      "type": "tv",
+      "name": "🎬 SİNEMA & DİZİ"
     },
     {
       "id": "CAT_DIGER",
@@ -92,9 +92,9 @@
       "name": "📂 MÜZIK - DIĞER"
     },
     {
-      "id": "CAT_SPOR_KANALLARI",
+      "id": "CAT_YABANCI_SPOR",
       "type": "tv",
-      "name": "📂 SPOR KANALLARI"
+      "name": "📂 YABANCI SPOR"
     },
     {
       "id": "CAT_COCUK",
@@ -102,14 +102,14 @@
       "name": "🧸 Çocuk"
     },
     {
-      "id": "CAT_EGLENCE",
-      "type": "tv",
-      "name": "📂 EĞLENCE"
-    },
-    {
       "id": "CAT_KURUMLAR",
       "type": "tv",
       "name": "📂 KURUMLAR"
+    },
+    {
+      "id": "CAT_EGLENCE",
+      "type": "tv",
+      "name": "📂 EĞLENCE"
     },
     {
       "id": "CAT_TOUCHTV",
