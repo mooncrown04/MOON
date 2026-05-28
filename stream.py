@@ -11,9 +11,9 @@ import requests
 # NOT: Büyük/küçük harfe duyarlıdır, M3U'daki kanal adıyla tam veya kısmi eşleşmesi yeterlidir.
 MANUEL_OZEL_KATEGORILER = {
     "⭐ ULUSAL KANALLAR": ["TRT 1", "ATV", "KANAL D","SHOW TV", "NOW TV", "STAR TV","KANAL 7","TV 8", "TV 8.5", "BEYAZ TV"],
-  # İsterseniz buraya yeni kategoriler de ekleyebilirsiniz:
-   "⚽ SPOR": ["BEIN SPORTS 1", "HT SPOR","TIVIBU SPOR", "A SPOR","TRT SPOR YILDIZ", "FUTBOL TV", "BEIN SPORTS 2"],
-   "BELGESEL": ["NATGEO CHANNEL","NAT GEO WILD", "TLC","DMAX", "TRT BELGESEL","YABAN TV", "ÇIFTÇI TV"],
+    # İsterseniz buraya yeni kategoriler de ekleyebilirsiniz:
+    "⚽ SPOR": ["BEIN SPORTS 1", "HT SPOR","TIVIBU SPOR", "A SPOR","TRT SPOR YILDIZ", "FUTBOL TV", "BEIN SPORTS 2"],
+    "BELGESEL": ["NATGEO CHANNEL","NAT GEO WILD", "TLC","DMAX", "TRT BELGESEL","YABAN TV", "ÇIFTÇI TV"],
     "📰 HABER": ["HALK TV", "TV 100", "SÖZCÜ TV","NTV", "HABERTÜRK", "HABER GLOBAL","TRT HABER","24 TV", "FLASH HABER TV", "A HABER",  "TGRT HABER", "ULUSAL KANAL", "NEO HABER"],
     "🎬 SİNEMA & DİZİ": ["FILM SCREEN","TABII TV", "TIVI6","EKOL TV", "TEVE 2","A2", "DIZI-FILM TV", "SIYAH BEYAZ AŞK","TATLI İNTIKAM","ZALIM İSTANBUL"],
 }
@@ -29,7 +29,9 @@ SECILI_KANAL_FILTRESI = ["194", "198", "202", "204", "206", "208", "210", "212",
 def slugify(text):
     """ID ve Dosya adları için metni temizler, büyük harf yapar ve tireleri boşlukla değiştirir."""
     if not text: return "DIGER"
-    tr_map = str.maketrans("çığöşüÇİĞÖŞÜ", "cigosucigosu")
+    # Kararsızlıkları önlemek için önce küçük harfe çevirip harf dönüşümü yapıyoruz
+    text = text.lower()
+    tr_map = str.maketrans("çığöşü", "cigosu")
     text = text.translate(tr_map)
     text = text.upper()
     text = text.replace("-", " ")
@@ -63,9 +65,11 @@ def process_stremio_addon():
     categories = {}
     channel_count = 0 
 
+    # UYARI: raw_group çıktısı tamamen büyük harf (UPPER) olduğu için buradaki anahtarlar da büyük harf yapıldı.
     category_map = {
         "ULUSAL": "📺 Ulusal Kanallar",
-        "SPOR KANALLARI": "⚽ SPOR", "Spor Kanalları": "⚽ SPOR",
+        "SPOR KANALLARI": "⚽ SPOR", 
+        "SPOR": "⚽ SPOR",
         "HABERLER": "📰 Haber",
         "SINEMA": "🎬 SİNEMA & DİZİ",
         "DIZI": "🎬 SİNEMA & DİZİ",
@@ -75,7 +79,10 @@ def process_stremio_addon():
         "ANIMASYON": "🎨 Animasyon",
         "COCUK": "🧸 Çocuk",
         "YETISKIN": "🔞 Yetişkin",
-        "Touchtv Slovakia": "📡 YABANCI ","TOUCHTV": "📡 YABANCI","FREESHOT": "📡 YABANCI","Sarkortv": "📡 YABANCI ",
+        "TOUCHTV SLOVAKIA": "📡 YABANCI ",
+        "TOUCHTV": "📡 YABANCI",
+        "FREESHOT": "📡 YABANCI",
+        "SARKORTV": "📡 YABANCI ",
         "DIGER": "📡 Diğer Kanallar"
     }
 
