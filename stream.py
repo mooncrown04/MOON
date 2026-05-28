@@ -24,7 +24,7 @@ SECILI_KANAL_FILTRESI = ["194", "198", "202", "204", "206", "208", "210", "212",
 # 4. 🚫 ENGELLENEN KATEGORİLER (Stremio'da bağımsız katalog olarak oluşmasını istemediğin gruplar)
 # M3U'daki group-title adını buraya yazarsan o grup adına bir kategori OLUŞMAZ.
 # Ancak içindeki kanal senin yukarıdaki listelerinde (Örn: SPOR, HABER) varsa, o listelere dahil edilir ve ENGELLEYENMEZ.
-ENGELLENEN_KATEGORILER = ["DINI", "TURK HD+ LINE", "SARKORTV", "GLWIZ", "ARABESK RADYOLAR", "FREESHOT", "TOUCHTV"]
+ENGELLENEN_KATEGORILER = ["DINI", "TURK HD+ LINE", "SARKORTV", "GLWIZ", "ARABESK RADYOLAR", "Freeshot Arabia", "Freeshot Ex-Yu", "Freeshot Albania & Kosovo", "Freeshot Brasil", "GLWIZ", "Freeshot Cyprus & Greece", "FREESHOT", "TOUCHTV"]
 
 
 def slugify(text):
