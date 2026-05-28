@@ -41,13 +41,12 @@ def process_stremio_addon():
     
     if os.path.exists(json_dosya_adi):
         try:
-            with open(json_dosya_adi, 'w+', encoding='utf-8') as f:
-                # Eğer dosya boşsa hata vermemesi için kontrol
-                f.seek(0)
+            # DÜZELTME: Dosyayı korumak ve sadece okumak için 'r' modu kullanıldı.
+            with open(json_dosya_adi, 'r', encoding='utf-8') as f:
                 content = f.read()
-                if content:
+                if content.strip():
                     kanal_aciklamalari = json.loads(content)
-            print(f"ℹ️ {json_dosya_adi} başarıyla yüklendi. Açıklamalar eşleştirilecek.")
+            print(f"ℹ️ {json_dosya_adi} başarıyla yüklendi. {len(kanal_aciklamalari)} adet kanal açıklaması eşleştirilecek.")
         except Exception as e:
             print(f"⚠️ {json_dosya_adi} okunurken hata oluştu, varsayılan açıklamalar kullanılacak: {e}")
     else:
@@ -119,7 +118,6 @@ def process_stremio_addon():
             raw_group = group_match.group(1).upper() if group_match else "DIGER"
             assigned_group = raw_group
             
-            # Anahtar kelime eşleşmesi için orijinal ismi sakla (JSON eşleşmesi için)
             matched_keyword_name = None
             
             # --- YENİ FİLTRELEME ADIMI (EN ÖNCELİKLİ) ---
@@ -128,7 +126,7 @@ def process_stremio_addon():
                 for kw in keywords:
                     if kw.upper() in name:
                         assigned_group = custom_cat
-                        matched_keyword_name = kw.upper() # Açıklama dosyasındaki anahtar (Örn: "TRT 1")
+                        matched_keyword_name = kw.upper()
                         found_custom = True
                         break
                 if found_custom:
@@ -160,7 +158,7 @@ def process_stremio_addon():
             chan_id = f"CH_{slugify(current_info['name'])}"
             cat_id = f"CAT_{slugify(current_info['group'])}"
             
-            # JSON dosyasından açıklamayı çekmeye çalış (Yoksa varsayılana düş)
+            # JSON'dan eşleşen açıklamayı bulma
             description_text = f"{current_info['group']} KATEGORISINDE YAYIN."
             for json_key, desc in kanal_aciklamalari.items():
                 if json_key.upper() in current_info['name']:
@@ -218,7 +216,7 @@ def process_stremio_addon():
                 "name": info["name"], 
                 "poster": info["logo"], 
                 "background": info["logo"],
-                "description": info["description"] # Detay sayfasına açıklamayı ekledik
+                "description": info["description"]
             }
         }
         with open(f"meta/tv/{cid}.json", 'w', encoding='utf-8') as f:
@@ -243,7 +241,7 @@ def process_stremio_addon():
     with open("manifest.json", 'w', encoding='utf-8') as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-    print(f"İşlem Tamamlandı! {channel_count} kanal güncellendi. Özel açıklamalar JSON'dan yüklendi.")
+    print(f"İşlem Tamamlandı! {channel_count} kanal güncellendi. Özel açıklamalar JSON'dan başarıyla çekildi.")
 
 if __name__ == "__main__":
     process_stremio_addon()
