@@ -57,11 +57,6 @@
       "name": "📂 EKONOMI"
     },
     {
-      "id": "CAT_FREESHOT_ARABIA",
-      "type": "tv",
-      "name": "📂 FREESHOT ARABIA"
-    },
-    {
       "id": "CAT_KIBRIS",
       "type": "tv",
       "name": "📂 KIBRIS"
@@ -75,11 +70,6 @@
       "id": "CAT_MUZIK_DIGER",
       "type": "tv",
       "name": "📂 MÜZIK - DIĞER"
-    },
-    {
-      "id": "CAT_FREESHOT_ALBANIA_KOSOVO",
-      "type": "tv",
-      "name": "📂 FREESHOT ALBANIA & KOSOVO"
     },
     {
       "id": "CAT_YABANCI_SPOR",
@@ -100,16 +90,6 @@
       "id": "CAT_COCUK",
       "type": "tv",
       "name": "🧸 Çocuk"
-    },
-    {
-      "id": "CAT_FREESHOT_BRASIL",
-      "type": "tv",
-      "name": "📂 FREESHOT BRASIL"
-    },
-    {
-      "id": "CAT_FREESHOT_CYPRUS_GREECE",
-      "type": "tv",
-      "name": "📂 FREESHOT CYPRUS & GREECE"
     },
     {
       "id": "CAT_FREESHOT_SPAIN",
@@ -145,11 +125,6 @@
       "id": "CAT_FREESHOT_CZECH_SLOVAK",
       "type": "tv",
       "name": "📂 FREESHOT CZECH & SLOVAK"
-    },
-    {
-      "id": "CAT_FREESHOT_EX_YU",
-      "type": "tv",
-      "name": "📂 FREESHOT EX-YU"
     },
     {
       "id": "CAT_FREESHOT_RUSSIA",
