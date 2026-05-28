@@ -7,11 +7,8 @@ import requests
 # --- AYARLAR ---
 
 # 1. 🆕 KENDİ ÖZEL KATEGORİLERİNİZ VE KANALLARINIZ
-# İstediğiniz kategoriyi yazın ve içine gelmesini istediğiniz kanalların adlarını EKLEYİN.
-# NOT: Büyük/küçük harfe duyarlıdır, M3U'daki kanal adıyla tam veya kısmi eşleşmesi yeterlidir.
 MANUEL_OZEL_KATEGORILER = {
     "⭐ ULUSAL KANALLAR": ["TRT 1", "ATV", "KANAL D","SHOW TV", "NOW TV", "STAR TV","KANAL 7","TV 8", "TV 8.5", "BEYAZ TV"],
-    # İsterseniz buraya yeni kategoriler de ekleyebilirsiniz:
     "⚽ SPOR": ["BEIN SPORTS 1", "HT SPOR","TIVIBU SPOR", "A SPOR","TRT SPOR YILDIZ", "FUTBOL TV", "BEIN SPORTS 2"],
     "BELGESEL": ["NATGEO CHANNEL","NAT GEO WILD", "TLC","DMAX", "TRT BELGESEL","YABAN TV", "ÇIFTÇI TV"],
     "📰 HABER": ["HALK TV", "TV 100", "SÖZCÜ TV","NTV", "HABERTÜRK", "HABER GLOBAL","TRT HABER","24 TV", "FLASH HABER TV", "A HABER",  "TGRT HABER", "ULUSAL KANAL", "NEO HABER"],
@@ -22,14 +19,12 @@ MANUEL_OZEL_KATEGORILER = {
 OZEL_KATEGORILER = ["FREESHOT", "GLWIZ","TOUCHTV"]
 
 # 3. Bu kelimeler KANAL İSMİNDE geçerse "SEÇILI" kategorisinde toplanır:
-# (Hatalı olan tırnak işaretleri düzeltildi)
 SECILI_KANAL_FILTRESI = ["194", "198", "202", "204", "206", "208", "210", "212", "214", "216", "KARESİ RADYO"]
 
 
 def slugify(text):
     """ID ve Dosya adları için metni temizler, büyük harf yapar ve tireleri boşlukla değiştirir."""
     if not text: return "DIGER"
-    # Kararsızlıkları önlemek için önce küçük harfe çevirip harf dönüşümü yapıyoruz
     text = text.lower()
     tr_map = str.maketrans("çığöşü", "cigosu")
     text = text.translate(tr_map)
@@ -40,6 +35,24 @@ def slugify(text):
     return text.replace(" ", "_")
 
 def process_stremio_addon():
+    # --- 0. DIŞARIDAN KANAL AÇIKLAMALARINI YÜKLE ---
+    kanal_aciklamalari = {}
+    json_dosya_adi = "kanallar_bilgi.json"
+    
+    if os.path.exists(json_dosya_adi):
+        try:
+            with open(json_dosya_adi, 'w+', encoding='utf-8') as f:
+                # Eğer dosya boşsa hata vermemesi için kontrol
+                f.seek(0)
+                content = f.read()
+                if content:
+                    kanal_aciklamalari = json.loads(content)
+            print(f"ℹ️ {json_dosya_adi} başarıyla yüklendi. Açıklamalar eşleştirilecek.")
+        except Exception as e:
+            print(f"⚠️ {json_dosya_adi} okunurken hata oluştu, varsayılan açıklamalar kullanılacak: {e}")
+    else:
+        print(f"⚠️ {json_dosya_adi} bulunamadı! Kanallar varsayılan açıklamalarla üretilecek.")
+
     # --- 1. LİSTEYİ İNDİR ---
     m3u_url = "https://raw.githubusercontent.com/mooncrown04/m3ubirlestir/refs/heads/main/birlesik_tv.m3u"
     print(f"Liste indiriliyor: {m3u_url}")
@@ -65,7 +78,6 @@ def process_stremio_addon():
     categories = {}
     channel_count = 0 
 
-    # UYARI: raw_group çıktısı tamamen büyük harf (UPPER) olduğu için buradaki anahtarlar da büyük harf yapıldı.
     category_map = {
         "ULUSAL": "📺 Ulusal Kanallar",
         "SPOR KANALLARI": "⚽ SPOR", 
@@ -86,7 +98,6 @@ def process_stremio_addon():
         "DIGER": "📡 Diğer Kanallar"
     }
 
-    # Kullanıcının kendi belirlediği kategorileri ana listeye kaydetmek için hazırlık
     manuel_slugs = {}
     for custom_cat_name in MANUEL_OZEL_KATEGORILER.keys():
         manuel_slugs[slugify(custom_cat_name)] = custom_cat_name
@@ -108,28 +119,29 @@ def process_stremio_addon():
             raw_group = group_match.group(1).upper() if group_match else "DIGER"
             assigned_group = raw_group
             
+            # Anahtar kelime eşleşmesi için orijinal ismi sakla (JSON eşleşmesi için)
+            matched_keyword_name = None
+            
             # --- YENİ FİLTRELEME ADIMI (EN ÖNCELİKLİ) ---
             found_custom = False
             for custom_cat, keywords in MANUEL_OZEL_KATEGORILER.items():
                 for kw in keywords:
-                    if kw.upper() in name: # Kanal adında senin belirlediğin kelime geçiyor mu?
+                    if kw.upper() in name:
                         assigned_group = custom_cat
+                        matched_keyword_name = kw.upper() # Açıklama dosyasındaki anahtar (Örn: "TRT 1")
                         found_custom = True
                         break
                 if found_custom:
                     break
 
-            # Eğer senin listende yoksa, eski otomatik sisteme devam et
             if not found_custom:
                 found_by_cat = False
-                # ÖNCE: Kategori araması
                 for cat_word in OZEL_KATEGORILER:
                     if cat_word in raw_group:
                         assigned_group = cat_word
                         found_by_cat = True
                         break
                 
-                # SONRA: Kanal ismi araması (SEÇİLİ olur)
                 if not found_by_cat:
                     for name_word in SECILI_KANAL_FILTRESI:
                         if name_word in name:
@@ -140,6 +152,7 @@ def process_stremio_addon():
                 "group": assigned_group,
                 "logo": logo_match.group(1) if logo_match else "https://via.placeholder.com/300",
                 "name": name,
+                "keyword_name": matched_keyword_name if matched_keyword_name else name,
                 "author": author_match.group(1) if author_match else "Bilinmeyen Kaynak"
             }
         
@@ -147,22 +160,29 @@ def process_stremio_addon():
             chan_id = f"CH_{slugify(current_info['name'])}"
             cat_id = f"CAT_{slugify(current_info['group'])}"
             
+            # JSON dosyasından açıklamayı çekmeye çalış (Yoksa varsayılana düş)
+            description_text = f"{current_info['group']} KATEGORISINDE YAYIN."
+            for json_key, desc in kanal_aciklamalari.items():
+                if json_key.upper() in current_info['name']:
+                    description_text = desc
+                    break
+            
             if chan_id not in channels:
                 channels[chan_id] = {
                     "name": current_info['name'],
                     "group": current_info['group'],
                     "logo": current_info['logo'],
+                    "description": description_text,
                     "streams": []
                 }
                 channel_count += 1 
 
                 if cat_id not in categories:
-                    # Kategori ismini ekrana basma kuralları
                     raw_slug = slugify(current_info['group'])
                     
                     if current_info['group'] == "SECILI":
                         display_name = "⭐ SEÇİLİ KANALLAR"
-                    elif raw_slug in manuel_slugs: # Eğer senin elinle eklediğin kategoriyse
+                    elif raw_slug in manuel_slugs:
                         display_name = manuel_slugs[raw_slug]
                     else:
                         display_name = category_map.get(raw_slug, f"📂 {current_info['group']}")
@@ -174,10 +194,9 @@ def process_stremio_addon():
                     "type": "tv",
                     "name": current_info['name'],
                     "poster": current_info['logo'],
-                    "description": f"{current_info['group']} KATEGORISINDE YAYIN."
+                    "description": description_text
                 })
 
-            # Streamleri birleştir
             s_idx = len(channels[chan_id]["streams"]) + 1
             channels[chan_id]["streams"].append({
                 "name": f"{current_info['name']}",
@@ -194,8 +213,12 @@ def process_stremio_addon():
         
         meta_data = {
             "meta": {
-                "id": cid, "type": "tv", "name": info["name"], 
-                "poster": info["logo"], "background": info["logo"]
+                "id": cid, 
+                "type": "tv", 
+                "name": info["name"], 
+                "poster": info["logo"], 
+                "background": info["logo"],
+                "description": info["description"] # Detay sayfasına açıklamayı ekledik
             }
         }
         with open(f"meta/tv/{cid}.json", 'w', encoding='utf-8') as f:
@@ -220,7 +243,7 @@ def process_stremio_addon():
     with open("manifest.json", 'w', encoding='utf-8') as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-    print(f"İşlem Tamamlandı! {channel_count} kanal güncellendi. Özel kategoriler eklendi.")
+    print(f"İşlem Tamamlandı! {channel_count} kanal güncellendi. Özel açıklamalar JSON'dan yüklendi.")
 
 if __name__ == "__main__":
     process_stremio_addon()
