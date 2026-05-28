@@ -16,7 +16,7 @@ MANUEL_OZEL_KATEGORILER = {
 }
 
 # 2. Bu kelimeler M3U KATEGORİ (group-title) adında geçerse kendi adıyla kategori olur:
-OZEL_KATEGORILER = ["Sarkortv", "GLWIZ","TOUCHTV"]
+OZEL_KATEGORILER = ["Sarkortv", "GLWIZ","TOUCHTV","FREESHOT"]
 
 # 3. Bu kelimeler KANAL İSMİNDE geçerse "SEÇILI" kategorisinde toplanır:
 SECILI_KANAL_FILTRESI = ["194", "198", "202", "204", "206", "208", "210", "212", "214", "216", "KARESİ RADYO"]
