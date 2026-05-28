@@ -21,6 +21,11 @@ OZEL_KATEGORILER = ["FREESHOT", "GLWIZ","TOUCHTV"]
 # 3. Bu kelimeler KANAL İSMİNDE geçerse "SEÇILI" kategorisinde toplanır:
 SECILI_KANAL_FILTRESI = ["194", "198", "202", "204", "206", "208", "210", "212", "214", "216", "KARESİ RADYO"]
 
+# 4. 🚫 ENGELLENEN KATEGORİLER (Stremio'da bağımsız katalog olarak oluşmasını istemediğin gruplar)
+# M3U'daki group-title adını buraya yazarsan o grup adına bir kategori OLUŞMAZ.
+# Ancak içindeki kanal senin yukarıdaki listelerinde (Örn: SPOR, HABER) varsa, o listelere dahil edilir ve ENGELLEYENMEZ.
+ENGELLENEN_KATEGORILER = ["DINI", "TURK HD+ LINE", "SARKORTV", "GWIZ", "ARABESK RADYOLAR"]
+
 
 def slugify(text):
     """ID ve Dosya adları için metni temizler, büyük harf yapar ve tireleri boşlukla değiştirir."""
@@ -52,6 +57,9 @@ def process_stremio_addon():
     else:
         print(f"⚠️ {json_dosya_adi} bulunamadı! Kanallar varsayılan açıklamalarla üretilecek.")
 
+    # Engellenen kategorileri büyük harf standardına çeviriyoruz
+    engellenenler_upper = [kat.upper() for kat in ENGELLENEN_KATEGORILER]
+
     # --- 1. LİSTEYİ İNDİR ---
     m3u_url = "https://raw.githubusercontent.com/mooncrown04/m3ubirlestir/refs/heads/main/birlesik_tv.m3u"
     print(f"Liste indiriliyor: {m3u_url}")
@@ -76,6 +84,7 @@ def process_stremio_addon():
     channels = {}
     categories = {}
     channel_count = 0 
+    engellenen_kategori_kanal_sayisi = 0
 
     category_map = {
         "ULUSAL": "📺 Ulusal Kanallar",
@@ -120,7 +129,7 @@ def process_stremio_addon():
             
             matched_keyword_name = None
             
-            # --- YENİ FİLTRELEME ADIMI (EN ÖNCELİKLİ) ---
+            # --- ÖNCELİKLİ ADIM: KANAL SENİN ÖZEL LİSTELERİNDE VAR MI? ---
             found_custom = False
             for custom_cat, keywords in MANUEL_OZEL_KATEGORILER.items():
                 for kw in keywords:
@@ -144,7 +153,16 @@ def process_stremio_addon():
                     for name_word in SECILI_KANAL_FILTRESI:
                         if name_word in name:
                             assigned_group = "SECILI"
+                            found_by_cat = True
                             break
+
+                # --- KATEGORİ ENGELLEME FİLTRESİ ---
+                # Eğer kanal senin hiçbir listene eşleşmediyse VE orijinal grubu engellenenler listesindeyse:
+                # O zaman kategorinin oluşmasını engellemek için kanalı tamamen atla.
+                if not found_by_cat and raw_group in engellenenler_upper:
+                    current_info = None
+                    engellenen_kategori_kanal_sayisi += 1
+                    continue
 
             current_info = {
                 "group": assigned_group,
@@ -241,7 +259,7 @@ def process_stremio_addon():
     with open("manifest.json", 'w', encoding='utf-8') as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-    print(f"İşlem Tamamlandı! {channel_count} kanal güncellendi. Özel açıklamalar JSON'dan başarıyla çekildi.")
+    print(f"İşlem Tamamlandı! {channel_count} kanal güncellendi. İstediğin özel kanallar korundu, sahipsiz kalan engellenmiş kategoriler ({engellenen_kategori_kanal_sayisi} adet kanal) oluşturulmadı.")
 
 if __name__ == "__main__":
     process_stremio_addon()
