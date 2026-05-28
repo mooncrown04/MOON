@@ -52,19 +52,9 @@
       "name": "📡 Diğer Kanallar"
     },
     {
-      "id": "CAT_SARKORTV",
-      "type": "tv",
-      "name": "📡 YABANCI "
-    },
-    {
       "id": "CAT_EKONOMI",
       "type": "tv",
       "name": "📂 EKONOMI"
-    },
-    {
-      "id": "CAT_DINI",
-      "type": "tv",
-      "name": "📂 DINI"
     },
     {
       "id": "CAT_FREESHOT",
@@ -80,11 +70,6 @@
       "id": "CAT_YEREL",
       "type": "tv",
       "name": "📂 YEREL"
-    },
-    {
-      "id": "CAT_ARABESK_RADYOLAR",
-      "type": "tv",
-      "name": "📂 ARABESK RADYOLAR"
     },
     {
       "id": "CAT_MUZIK_DIGER",
@@ -115,11 +100,6 @@
       "id": "CAT_TOUCHTV",
       "type": "tv",
       "name": "📡 YABANCI"
-    },
-    {
-      "id": "CAT_TURK_HD_LINE",
-      "type": "tv",
-      "name": "📂 TURK HD+ LINE"
     },
     {
       "id": "CAT_GLWIZ",
