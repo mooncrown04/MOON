@@ -72,6 +72,11 @@
       "name": "📂 YEREL"
     },
     {
+      "id": "CAT_GENEL",
+      "type": "tv",
+      "name": "📂 GENEL"
+    },
+    {
       "id": "CAT_MUZIK_DIGER",
       "type": "tv",
       "name": "📂 MÜZIK - DIĞER"
@@ -85,6 +90,11 @@
       "id": "CAT_COCUK",
       "type": "tv",
       "name": "🧸 Çocuk"
+    },
+    {
+      "id": "CAT_EGITIM",
+      "type": "tv",
+      "name": "📂 EĞITIM"
     },
     {
       "id": "CAT_KURUMLAR",
