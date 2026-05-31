@@ -57,11 +57,6 @@
       "name": "📂 EKONOMI"
     },
     {
-      "id": "CAT_FREESHOT",
-      "type": "tv",
-      "name": "📡 YABANCI"
-    },
-    {
       "id": "CAT_KIBRIS",
       "type": "tv",
       "name": "📂 KIBRIS"
@@ -72,14 +67,9 @@
       "name": "📂 YEREL"
     },
     {
-      "id": "CAT_GENEL",
+      "id": "CAT_FREESHOT",
       "type": "tv",
-      "name": "📂 GENEL"
-    },
-    {
-      "id": "CAT_MUZIK_DIGER",
-      "type": "tv",
-      "name": "📂 MÜZIK - DIĞER"
+      "name": "📡 YABANCI"
     },
     {
       "id": "CAT_YABANCI_SPOR",
@@ -105,6 +95,11 @@
       "id": "CAT_EGLENCE",
       "type": "tv",
       "name": "📂 EĞLENCE"
+    },
+    {
+      "id": "CAT_MUZIK_DIGER",
+      "type": "tv",
+      "name": "📂 MÜZIK - DIĞER"
     },
     {
       "id": "CAT_GLWIZ",
