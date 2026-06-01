@@ -57,19 +57,14 @@
       "name": "📂 EKONOMI"
     },
     {
-      "id": "CAT_KIBRIS",
-      "type": "tv",
-      "name": "📂 KIBRIS"
-    },
-    {
-      "id": "CAT_YEREL",
-      "type": "tv",
-      "name": "📂 YEREL"
-    },
-    {
       "id": "CAT_FREESHOT",
       "type": "tv",
       "name": "📡 YABANCI"
+    },
+    {
+      "id": "CAT_GENEL",
+      "type": "tv",
+      "name": "📂 GENEL"
     },
     {
       "id": "CAT_YABANCI_SPOR",
@@ -82,14 +77,14 @@
       "name": "🧸 Çocuk"
     },
     {
+      "id": "CAT_YEREL",
+      "type": "tv",
+      "name": "📂 YEREL"
+    },
+    {
       "id": "CAT_EGITIM",
       "type": "tv",
       "name": "📂 EĞITIM"
-    },
-    {
-      "id": "CAT_KURUMLAR",
-      "type": "tv",
-      "name": "📂 KURUMLAR"
     },
     {
       "id": "CAT_EGLENCE",
@@ -97,19 +92,9 @@
       "name": "📂 EĞLENCE"
     },
     {
-      "id": "CAT_MUZIK_DIGER",
-      "type": "tv",
-      "name": "📂 MÜZIK - DIĞER"
-    },
-    {
       "id": "CAT_GLWIZ",
       "type": "tv",
       "name": "📂 GLWIZ"
-    },
-    {
-      "id": "CAT_SECILI",
-      "type": "tv",
-      "name": "⭐ SEÇİLİ KANALLAR"
     }
   ]
 }
