@@ -67,14 +67,14 @@
       "name": "📂 KIBRIS"
     },
     {
-      "id": "CAT_GENEL",
-      "type": "tv",
-      "name": "📂 GENEL"
-    },
-    {
       "id": "CAT_YEREL",
       "type": "tv",
       "name": "📂 YEREL"
+    },
+    {
+      "id": "CAT_GENEL",
+      "type": "tv",
+      "name": "📂 GENEL"
     },
     {
       "id": "CAT_MUZIK_DIGER",
@@ -85,6 +85,11 @@
       "id": "CAT_YABANCI_SPOR",
       "type": "tv",
       "name": "📂 YABANCI SPOR"
+    },
+    {
+      "id": "CAT_COCUK",
+      "type": "tv",
+      "name": "🧸 Çocuk"
     },
     {
       "id": "CAT_EGITIM",
@@ -100,11 +105,6 @@
       "id": "CAT_EGLENCE",
       "type": "tv",
       "name": "📂 EĞLENCE"
-    },
-    {
-      "id": "CAT_COCUK",
-      "type": "tv",
-      "name": "🧸 Çocuk"
     },
     {
       "id": "CAT_GLWIZ",
