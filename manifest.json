@@ -62,11 +62,6 @@
       "name": "📡 YABANCI"
     },
     {
-      "id": "CAT_KIBRIS",
-      "type": "tv",
-      "name": "📂 KIBRIS"
-    },
-    {
       "id": "CAT_YEREL",
       "type": "tv",
       "name": "📂 YEREL"
@@ -85,6 +80,11 @@
       "id": "CAT_YABANCI_SPOR",
       "type": "tv",
       "name": "📂 YABANCI SPOR"
+    },
+    {
+      "id": "CAT_KIBRIS",
+      "type": "tv",
+      "name": "📂 KIBRIS"
     },
     {
       "id": "CAT_COCUK",
