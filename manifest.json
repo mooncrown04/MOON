@@ -77,6 +77,11 @@
       "name": "📂 GENEL"
     },
     {
+      "id": "CAT_MUZIK_DIGER",
+      "type": "tv",
+      "name": "📂 MÜZIK - DIĞER"
+    },
+    {
       "id": "CAT_YABANCI_SPOR",
       "type": "tv",
       "name": "📂 YABANCI SPOR"
@@ -100,11 +105,6 @@
       "id": "CAT_EGLENCE",
       "type": "tv",
       "name": "📂 EĞLENCE"
-    },
-    {
-      "id": "CAT_MUZIK_DIGER",
-      "type": "tv",
-      "name": "📂 MÜZIK - DIĞER"
     },
     {
       "id": "CAT_GLWIZ",
