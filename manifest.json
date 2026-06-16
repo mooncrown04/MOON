@@ -67,14 +67,14 @@
       "name": "📂 KIBRIS"
     },
     {
-      "id": "CAT_YEREL",
-      "type": "tv",
-      "name": "📂 YEREL"
-    },
-    {
       "id": "CAT_GENEL",
       "type": "tv",
       "name": "📂 GENEL"
+    },
+    {
+      "id": "CAT_YEREL",
+      "type": "tv",
+      "name": "📂 YEREL"
     },
     {
       "id": "CAT_MUZIK_DIGER",
