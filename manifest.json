@@ -57,24 +57,19 @@
       "name": "📂 EKONOMI"
     },
     {
-      "id": "CAT_FREESHOT",
-      "type": "tv",
-      "name": "📡 YABANCI"
-    },
-    {
       "id": "CAT_KIBRIS",
       "type": "tv",
       "name": "📂 KIBRIS"
     },
     {
-      "id": "CAT_GENEL",
-      "type": "tv",
-      "name": "📂 GENEL"
-    },
-    {
       "id": "CAT_YEREL",
       "type": "tv",
       "name": "📂 YEREL"
+    },
+    {
+      "id": "CAT_GENEL",
+      "type": "tv",
+      "name": "📂 GENEL"
     },
     {
       "id": "CAT_MUZIK_DIGER",
