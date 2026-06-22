@@ -32,11 +32,6 @@
       "name": "📰 HABER"
     },
     {
-      "id": "CAT_BELGESEL",
-      "type": "tv",
-      "name": "BELGESEL"
-    },
-    {
       "id": "CAT_MUZIK",
       "type": "tv",
       "name": "🎵 Müzik"
@@ -45,26 +40,6 @@
       "id": "CAT_SINEMA_DIZI",
       "type": "tv",
       "name": "🎬 SİNEMA & DİZİ"
-    },
-    {
-      "id": "CAT_DIGER",
-      "type": "tv",
-      "name": "📡 Diğer Kanallar"
-    },
-    {
-      "id": "CAT_EKONOMI",
-      "type": "tv",
-      "name": "📂 EKONOMI"
-    },
-    {
-      "id": "CAT_KIBRIS",
-      "type": "tv",
-      "name": "📂 KIBRIS"
-    },
-    {
-      "id": "CAT_YEREL",
-      "type": "tv",
-      "name": "📂 YEREL"
     },
     {
       "id": "CAT_GENEL",
@@ -77,9 +52,9 @@
       "name": "📂 YABANCI SPOR"
     },
     {
-      "id": "CAT_COCUK",
+      "id": "CAT_YEREL",
       "type": "tv",
-      "name": "🧸 Çocuk"
+      "name": "📂 YEREL"
     },
     {
       "id": "CAT_EGITIM",
@@ -87,19 +62,14 @@
       "name": "📂 EĞITIM"
     },
     {
-      "id": "CAT_KURUMLAR",
+      "id": "CAT_SINEMA",
       "type": "tv",
-      "name": "📂 KURUMLAR"
+      "name": "🎬 SİNEMA & DİZİ"
     },
     {
-      "id": "CAT_EGLENCE",
+      "id": "CAT_COCUK",
       "type": "tv",
-      "name": "📂 EĞLENCE"
-    },
-    {
-      "id": "CAT_MUZIK_DIGER",
-      "type": "tv",
-      "name": "📂 MÜZIK - DIĞER"
+      "name": "🧸 Çocuk"
     },
     {
       "id": "CAT_GLWIZ",
@@ -107,9 +77,9 @@
       "name": "📂 GLWIZ"
     },
     {
-      "id": "CAT_SECILI",
+      "id": "CAT_BELGESEL",
       "type": "tv",
-      "name": "⭐ SEÇİLİ KANALLAR"
+      "name": "BELGESEL"
     }
   ]
 }
