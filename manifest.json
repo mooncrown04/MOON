@@ -47,9 +47,24 @@
       "name": "🎬 SİNEMA & DİZİ"
     },
     {
+      "id": "CAT_GENEL",
+      "type": "tv",
+      "name": "📂 GENEL"
+    },
+    {
       "id": "CAT_YABANCI_SPOR",
       "type": "tv",
       "name": "📂 YABANCI SPOR"
+    },
+    {
+      "id": "CAT_YEREL",
+      "type": "tv",
+      "name": "📂 YEREL"
+    },
+    {
+      "id": "CAT_EGITIM",
+      "type": "tv",
+      "name": "📂 EĞITIM"
     },
     {
       "id": "CAT_SINEMA",
