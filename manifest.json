@@ -52,6 +52,11 @@
       "name": "📂 GENEL"
     },
     {
+      "id": "CAT_YABANCI_SPOR",
+      "type": "tv",
+      "name": "📂 YABANCI SPOR"
+    },
+    {
       "id": "CAT_YEREL",
       "type": "tv",
       "name": "📂 YEREL"
