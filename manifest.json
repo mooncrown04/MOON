@@ -52,6 +52,11 @@
       "name": "📂 GENEL"
     },
     {
+      "id": "CAT_SINEMA",
+      "type": "tv",
+      "name": "🎬 SİNEMA & DİZİ"
+    },
+    {
       "id": "CAT_YABANCI_SPOR",
       "type": "tv",
       "name": "📂 YABANCI SPOR"
@@ -67,14 +72,9 @@
       "name": "📂 EĞITIM"
     },
     {
-      "id": "CAT_SINEMA",
+      "id": "CAT_COCUK_AILE",
       "type": "tv",
-      "name": "🎬 SİNEMA & DİZİ"
-    },
-    {
-      "id": "CAT_COCUK",
-      "type": "tv",
-      "name": "🧸 Çocuk"
+      "name": "📂 ÇOCUK & AİLE"
     }
   ]
 }
