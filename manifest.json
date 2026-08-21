@@ -37,11 +37,6 @@
       "name": "BELGESEL"
     },
     {
-      "id": "CAT_MUZIK",
-      "type": "tv",
-      "name": "🎵 Müzik"
-    },
-    {
       "id": "CAT_SINEMA_DIZI",
       "type": "tv",
       "name": "🎬 SİNEMA & DİZİ"
@@ -57,14 +52,14 @@
       "name": "🎬 SİNEMA & DİZİ"
     },
     {
-      "id": "CAT_YABANCI_SPOR",
-      "type": "tv",
-      "name": "📂 YABANCI SPOR"
-    },
-    {
       "id": "CAT_YEREL",
       "type": "tv",
       "name": "📂 YEREL"
+    },
+    {
+      "id": "CAT_MUZIK",
+      "type": "tv",
+      "name": "🎵 Müzik"
     },
     {
       "id": "CAT_EGITIM",
