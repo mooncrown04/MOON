@@ -253,7 +253,7 @@ def process_stremio_addon():
         "logo": "https://st5.depositphotos.com/1041725/67731/v/380/depositphotos_677319750-stock-illustration-ararat-mountain-illustration-vector-white.jpg",
         "resources": ["catalog", "meta", "stream"],
         "types": ["tv"],
-        "idPrefixes": ["CH_"],
+        "idPrefixes": ["CH,CH_"],
         "catalogs": [{"id": k, "type": "tv", "name": v['display_name']} for k, v in categories.items()]
     }
     
