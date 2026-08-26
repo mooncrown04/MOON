@@ -37,19 +37,24 @@
       "name": "BELGESEL"
     },
     {
+      "id": "CAT_MUZIK",
+      "type": "tv",
+      "name": "🎵 MÜZİK"
+    },
+    {
       "id": "CAT_SINEMA_DIZI",
       "type": "tv",
       "name": "🎬 SİNEMA & DİZİ"
     },
     {
-      "id": "CAT_GENEL",
+      "id": "CAT_𝖡𝖤𝖫𝖦𝖤𝖲𝖤𝖫YASAM_KANALLARI",
       "type": "tv",
-      "name": "📂 GENEL"
+      "name": "📂 𝖡𝖤𝖫𝖦𝖤𝖲𝖤𝖫&YAŞAM KANALLARI"
     },
     {
-      "id": "CAT_SINEMA",
+      "id": "CAT_YEREL_KANALLAR",
       "type": "tv",
-      "name": "🎬 SİNEMA & DİZİ"
+      "name": "📂 🇹🇷 YEREL KANALLAR 💒🏠🏯"
     },
     {
       "id": "CAT_YEREL",
@@ -57,9 +62,9 @@
       "name": "📂 YEREL"
     },
     {
-      "id": "CAT_MUZIK",
+      "id": "CAT_MUZIK_KANALLARI",
       "type": "tv",
-      "name": "🎵 MÜZİK"
+      "name": "📂 🇹🇷  MÜZİK KANALLARI 🎵🎸🎻🎹"
     },
     {
       "id": "CAT_EGITIM",
@@ -67,9 +72,44 @@
       "name": "📂 EĞITIM"
     },
     {
+      "id": "CAT_COCUK_KANALLARI",
+      "type": "tv",
+      "name": "📂 🇹🇷 ÇOCUK KANALLARI 👶🍼"
+    },
+    {
+      "id": "CAT_DIZISINEMA_KANALLARI",
+      "type": "tv",
+      "name": "📂 🇹🇷 DİZİ&SİNEMA KANALLARI 🎥🎦🎬⚡"
+    },
+    {
+      "id": "CAT_SINEMA",
+      "type": "tv",
+      "name": "🎬 SİNEMA & DİZİ"
+    },
+    {
       "id": "CAT_COCUK_AILE",
       "type": "tv",
       "name": "📂 ÇOCUK & AİLE"
+    },
+    {
+      "id": "CAT_YURTDISI_KANALLAR",
+      "type": "tv",
+      "name": "📂 🇪🇺 YURTDIŞI KANALLAR"
+    },
+    {
+      "id": "CAT_DENEME",
+      "type": "tv",
+      "name": "📂 DENEME"
+    },
+    {
+      "id": "CAT_YABANCI_MUZIK_KANALLARI",
+      "type": "tv",
+      "name": "📂 YABANCI MÜZİK KANALLARI 🎵🎸🎻🎹"
+    },
+    {
+      "id": "CAT_IZMIR",
+      "type": "tv",
+      "name": "📂 İZMİR"
     }
   ]
 }
