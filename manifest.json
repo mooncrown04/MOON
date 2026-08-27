@@ -62,11 +62,6 @@
       "name": "📂 YEREL"
     },
     {
-      "id": "CAT_SINEMA",
-      "type": "tv",
-      "name": "🎬 SİNEMA & DİZİ"
-    },
-    {
       "id": "CAT_MUZIK_KANALLARI",
       "type": "tv",
       "name": "📂 🇹🇷  MÜZİK KANALLARI 🎵🎸🎻🎹"
@@ -77,6 +72,16 @@
       "name": "📂 EĞITIM"
     },
     {
+      "id": "CAT_COCUK_KANALLARI",
+      "type": "tv",
+      "name": "📂 🇹🇷 ÇOCUK KANALLARI 👶🍼"
+    },
+    {
+      "id": "CAT_DIZISINEMA_KANALLARI",
+      "type": "tv",
+      "name": "📂 🇹🇷 DİZİ&SİNEMA KANALLARI 🎥🎦🎬⚡"
+    },
+    {
       "id": "CAT_COCUK_AILE",
       "type": "tv",
       "name": "📂 ÇOCUK & AİLE"
@@ -85,11 +90,6 @@
       "id": "CAT_YURTDISI_KANALLAR",
       "type": "tv",
       "name": "📂 🇪🇺 YURTDIŞI KANALLAR"
-    },
-    {
-      "id": "CAT_DIZISINEMA_KANALLARI",
-      "type": "tv",
-      "name": "📂 🇹🇷 DİZİ&SİNEMA KANALLARI 🎥🎦🎬⚡"
     },
     {
       "id": "CAT_DENEME",
@@ -107,9 +107,9 @@
       "name": "📂 İZMİR"
     },
     {
-      "id": "CAT_COCUK_KANALLARI",
+      "id": "CAT_SINEMA",
       "type": "tv",
-      "name": "📂 🇹🇷 ÇOCUK KANALLARI 👶🍼"
+      "name": "🎬 SİNEMA & DİZİ"
     }
   ]
 }
