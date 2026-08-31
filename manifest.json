@@ -72,11 +72,6 @@
       "name": "📂 EĞITIM"
     },
     {
-      "id": "CAT_DIZISINEMA_KANALLARI",
-      "type": "tv",
-      "name": "📂 🇹🇷 DİZİ&SİNEMA KANALLARI 🎥🎦🎬⚡"
-    },
-    {
       "id": "CAT_COCUK_AILE",
       "type": "tv",
       "name": "📂 ÇOCUK & AİLE"
@@ -110,6 +105,11 @@
       "id": "CAT_SINEMA",
       "type": "tv",
       "name": "🎬 SİNEMA & DİZİ"
+    },
+    {
+      "id": "CAT_DIZISINEMA_KANALLARI",
+      "type": "tv",
+      "name": "📂 🇹🇷 DİZİ&SİNEMA KANALLARI 🎥🎦🎬⚡"
     }
   ]
 }
