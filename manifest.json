@@ -72,14 +72,19 @@
       "name": "📂 EĞITIM"
     },
     {
-      "id": "CAT_COCUK_AILE",
+      "id": "CAT_DIZISINEMA_KANALLARI",
       "type": "tv",
-      "name": "📂 ÇOCUK & AİLE"
+      "name": "📂 🇹🇷 DİZİ&SİNEMA KANALLARI 🎥🎦🎬⚡"
     },
     {
       "id": "CAT_COCUK_KANALLARI",
       "type": "tv",
       "name": "📂 🇹🇷 ÇOCUK KANALLARI 👶🍼"
+    },
+    {
+      "id": "CAT_COCUK_AILE",
+      "type": "tv",
+      "name": "📂 ÇOCUK & AİLE"
     },
     {
       "id": "CAT_YURTDISI_KANALLAR",
@@ -105,11 +110,6 @@
       "id": "CAT_SINEMA",
       "type": "tv",
       "name": "🎬 SİNEMA & DİZİ"
-    },
-    {
-      "id": "CAT_DIZISINEMA_KANALLARI",
-      "type": "tv",
-      "name": "📂 🇹🇷 DİZİ&SİNEMA KANALLARI 🎥🎦🎬⚡"
     }
   ]
 }
