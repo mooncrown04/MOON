@@ -62,6 +62,11 @@
       "name": "📂 YEREL"
     },
     {
+      "id": "CAT_SINEMA",
+      "type": "tv",
+      "name": "🎬 SİNEMA & DİZİ"
+    },
+    {
       "id": "CAT_MUZIK_KANALLARI",
       "type": "tv",
       "name": "📂 🇹🇷  MÜZİK KANALLARI 🎵🎸🎻🎹"
@@ -105,11 +110,6 @@
       "id": "CAT_IZMIR",
       "type": "tv",
       "name": "📂 İZMİR"
-    },
-    {
-      "id": "CAT_SINEMA",
-      "type": "tv",
-      "name": "🎬 SİNEMA & DİZİ"
     }
   ]
 }
