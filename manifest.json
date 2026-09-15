@@ -22,11 +22,6 @@
       "name": "⭐ ULUSAL KANALLAR"
     },
     {
-      "id": "CAT_SINEMA_DIZI",
-      "type": "tv",
-      "name": "🎬 SİNEMA & DİZİ"
-    },
-    {
       "id": "CAT_SPOR",
       "type": "tv",
       "name": "⚽ SPOR"
@@ -45,6 +40,11 @@
       "id": "CAT_MUZIK",
       "type": "tv",
       "name": "🎵 MÜZİK"
+    },
+    {
+      "id": "CAT_SINEMA_DIZI",
+      "type": "tv",
+      "name": "🎬 SİNEMA & DİZİ"
     },
     {
       "id": "CAT_𝖡𝖤𝖫𝖦𝖤𝖲𝖤𝖫YASAM_KANALLARI",
