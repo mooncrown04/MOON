@@ -62,9 +62,14 @@
       "name": "📂 YEREL"
     },
     {
-      "id": "CAT_COCUK_AILE",
+      "id": "CAT_MUZIK_KANALLARI",
       "type": "tv",
-      "name": "📂 ÇOCUK & AİLE"
+      "name": "📂 🇹🇷  MÜZİK KANALLARI 🎵🎸🎻🎹"
+    },
+    {
+      "id": "CAT_COCUK",
+      "type": "tv",
+      "name": "🧸 Çocuk"
     },
     {
       "id": "CAT_EGITIM",
@@ -82,9 +87,9 @@
       "name": "📂 🇹🇷 ÇOCUK KANALLARI 👶🍼"
     },
     {
-      "id": "CAT_MUZIK_KANALLARI",
+      "id": "CAT_COCUK_AILE",
       "type": "tv",
-      "name": "📂 🇹🇷  MÜZİK KANALLARI 🎵🎸🎻🎹"
+      "name": "📂 ÇOCUK & AİLE"
     },
     {
       "id": "CAT_YURTDISI_KANALLAR",
