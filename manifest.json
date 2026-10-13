@@ -57,14 +57,14 @@
       "name": "📂 🇹🇷 YEREL KANALLAR 💒🏠🏯"
     },
     {
-      "id": "CAT_MUZIK_KANALLARI",
-      "type": "tv",
-      "name": "📂 🇹🇷  MÜZİK KANALLARI 🎵🎸🎻🎹"
-    },
-    {
       "id": "CAT_YEREL",
       "type": "tv",
       "name": "📂 YEREL"
+    },
+    {
+      "id": "CAT_MUZIK_KANALLARI",
+      "type": "tv",
+      "name": "📂 🇹🇷  MÜZİK KANALLARI 🎵🎸🎻🎹"
     },
     {
       "id": "CAT_COCUK",
