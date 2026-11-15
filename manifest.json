@@ -97,6 +97,11 @@
       "name": "📂 🇹🇷 ÇOCUK KANALLARI 👶🍼"
     },
     {
+      "id": "CAT_KANALLAR",
+      "type": "tv",
+      "name": "📂 KANALLAR"
+    },
+    {
       "id": "CAT_YURTDISI_KANALLAR",
       "type": "tv",
       "name": "📂 🇪🇺 YURTDIŞI KANALLAR"
