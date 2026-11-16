@@ -57,6 +57,11 @@
       "name": "📂 🇹🇷 YEREL KANALLAR 💒🏠🏯"
     },
     {
+      "id": "CAT_KANALLAR",
+      "type": "tv",
+      "name": "📂 KANALLAR"
+    },
+    {
       "id": "CAT_YEREL",
       "type": "tv",
       "name": "📂 YEREL"
@@ -95,11 +100,6 @@
       "id": "CAT_COCUK_KANALLARI",
       "type": "tv",
       "name": "📂 🇹🇷 ÇOCUK KANALLARI 👶🍼"
-    },
-    {
-      "id": "CAT_KANALLAR",
-      "type": "tv",
-      "name": "📂 KANALLAR"
     },
     {
       "id": "CAT_YURTDISI_KANALLAR",
